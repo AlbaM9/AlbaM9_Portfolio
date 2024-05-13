@@ -1,3 +1,6 @@
+@import '../core/Variables.scss';
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -32,7 +35,7 @@
         a {
             color: white;
             padding: 8px;
-            border: 3px solid blue;
+            border: 3px solid $wic-rosa;
             font-size: 18px;
             border-radius: 20px;
 

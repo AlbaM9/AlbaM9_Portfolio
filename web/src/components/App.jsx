@@ -12,35 +12,37 @@ function App() {
   return (
     <>
       <Header />
-      <section className="Introduction">
+      <body>
+        <section className="Introduction">
 
-      </section>
-      <section className="About">
+        </section>
+        <section className="About">
 
-      </section>
-      <section className="Passions">
+        </section>
+        <section className="Passions">
 
-      </section>
-      <section className="Skills">
+        </section>
+        <section className="Skills">
 
-      </section>
+        </section>
 
-      <section className="Porfolio">
-        <div className="web">
-          <div className="projects">
-            <Project />
+        <section className="Porfolio">
+          <div className="web">
+            <div className="projects">
+              <Project />
+
+            </div>
 
           </div>
+          <div className="Others"></div>
 
-        </div>
-        <div className="Others"></div>
+        </section>
+        <section className="Contact">
+          <div className="web"></div>
+          <div className="Others"></div>
 
-      </section>
-      <section className="Contact">
-        <div className="web"></div>
-        <div className="Others"></div>
-
-      </section>
+        </section>
+      </body>
 
     </>
   )
