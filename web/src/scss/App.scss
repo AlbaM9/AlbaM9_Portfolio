@@ -6,8 +6,259 @@
 
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    //cambiar el margen para las media queries
 }
 
 body {
     background-color: $azul-oscuro;
+
+}
+
+.Introduction {
+
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    //gap: 3vw;
+
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+
+        h1 {
+            color: $wic-verde-claro;
+            font-size: 70px;
+        }
+
+        h2 {
+            color: $wic-azul-claro ;
+            font-size: 30px;
+
+        }
+
+        h3 {
+            color: $wic-rosa;
+            font-size: 20px;
+        }
+
+        .xtra {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            gap: 30px;
+            transform: translateX(-40px);
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                //justify-content: start;
+
+                li {
+
+                    color: $wic-gris-claro;
+                    list-style: none;
+                    font-size: 18px;
+
+
+                }
+            }
+
+
+
+
+
+        }
+
+        div {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+
+            button {
+                color: white;
+                padding: 8px;
+                border: 2px solid $wic-rosa;
+                font-size: 18px;
+                border-radius: 10px;
+                background-color: rgba(255, 99, 247, 0.212);
+                width: auto;
+
+
+            }
+
+            .contactBtn {
+                border: 2px solid $wic-azul-claro;
+                background-color: rgba(65, 253, 175, 0.192);
+            }
+        }
+
+
+    }
+
+    .social {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-left: -40px;
+
+        .followMe {
+            color: $wic-gris-claro;
+            transform: rotate(270deg);
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+            padding: 5px;
+
+        }
+
+        .icons {
+            color: $wic-gris-claro !important;
+            padding: 5px;
+            transform: scale(130%)
+        }
+
+
+
+    }
+
+
+
+}
+
+.About {
+    margin-top: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 3vw;
+
+    .aboutTxt {
+        color: $wic-gris-claro;
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 28px;
+        padding: 5px;
+        margin-right: -30px;
+    }
+
+    img {
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    p {
+        width: 30vw;
+        color: $wic-gris-claro;
+    }
+
+}
+
+.Passions {
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1vw;
+
+
+    //width: 100px;
+    .passionsLabel {
+        color: $wic-gris-claro;
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 28px;
+        padding: 5px;
+    }
+
+    div {
+        //border: 2px solid $wic-azul-claro;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+
+        ;
+
+        .passIcons {
+            margin-top: 5vh;
+            color: $wic-rosa;
+            transform: scale(250%);
+            margin-bottom: 5vh;
+
+        }
+
+        .passIcons1 {
+            margin-top: 5vh;
+            color: $wic-azul-claro;
+            transform: scale(250%);
+            margin-bottom: 5vh;
+
+        }
+
+        h2 {
+            color: $wic-gris-claro;
+            font-size: 20px;
+            width: 8vw;
+            height: auto;
+            padding-bottom: 15px;
+
+        }
+    }
+
+}
+
+.Skills {
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+
+    }
+
+    .skillsLabel {
+        color: $wic-gris-claro;
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 28px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+}
+
+.Portfolio {
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .projLabel {
+
+        color: $wic-gris-claro;
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 28px;
+        padding: 5px;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1vw;
+    }
 }
