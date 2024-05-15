@@ -5,17 +5,24 @@
     justify-content: center;
     gap: 35vw;
     padding: 30px;
+    align-items: center;
 
-    div {
+    .logo {
         color: white;
+        transform: scale(140%);
+        padding: 10px;
+        background-color: $wic-rosa;
+        border-radius: 30px;
     }
+
+
 }
 
 .navMenu {
     display: flex;
     text-decoration: none;
     list-style: none;
-    gap: 15px;
+    gap: 5vw;
 
     li {
         color: white;

@@ -4,20 +4,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    //justify-content: center;
 
-    gap: 30px;
-    width: 22vw;
+    gap: 20px;
+    width: 35vw;
+
+
     height: auto;
     //border: 1px solid rgb(68, 68, 255);
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1) url('/src/images/pngegg.png');
+    //background: rgba(255, 255, 255, 0.1) url('/src/images/pngegg.png');
+    background-color: rgba(255, 137, 225, 0.164);
     background-position: bottom center;
 
     .icons {
         color: $wic-azul-claro;
-        padding: 5px;
-        transform: scale(130%)
+        padding: 15px;
+        transform: scale(150%);
+
     }
 
     .img {

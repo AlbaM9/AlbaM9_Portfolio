@@ -1,11 +1,13 @@
 import React from "react";
 import "../scss/components/Header.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFont } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     return (
         <header>
             <nav className="header">
-                <div>Icon</div>
+                <div><FontAwesomeIcon icon={faFont} className="logo" /></div>
                 <ul className="navMenu" >
                     <li>ABOUT</li>
                     <li>SKILLS</li>
