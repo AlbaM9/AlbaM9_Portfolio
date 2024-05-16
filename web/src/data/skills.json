@@ -1,0 +1,42 @@
+[
+    {
+        "name": "React JS",
+        "percentage": 70
+    },
+    {
+        "name": "Express JS",
+        "percentage": 70
+    },
+    {
+        "name": "Node JS",
+        "percentage": 70
+    },
+    {
+        "name": "MySQL",
+        "percentage": 75
+    },
+    {
+        "name": "MongoDB",
+        "percentage": 55
+    },
+    {
+        "name": "JavaScript",
+        "percentage": 75
+    },
+    {
+        "name": "C#",
+        "percentage": 65
+    },
+    {
+        "name": "Python",
+        "percentage": 50
+    },
+    {
+        "name": "Java",
+        "percentage": 60
+    },
+    {
+        "name": "Unity",
+        "percentage": 80
+    }
+]

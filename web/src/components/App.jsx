@@ -9,12 +9,13 @@ import { faGithubAlt, faLinkedinIn, faItchIo } from '@fortawesome/free-brands-sv
 import { faCube, faMusic, faPalette, faBook, faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 
-
-
 import Header from "./Header";
 import Project from "./Project";
 import Skill from "./Skill";
 import "../scss/App.scss";
+
+import skills from '../data/skills.json';
+import projects from '../data/webProjects.json';
 
 
 
@@ -54,7 +55,11 @@ function App() {
         <section className="About">
           <p>
             I am a passionate web developer with experience in technologies like React and Node.js. I am currently seeking new opportunities that allow me to continue learning and growing in this ever-evolving sector. I am committed to contributing my energy and creativity to challenging projects while continuing to expand my technical skills and adapting to an environment that fosters innovation and excellence.</p>
-          <img src="https://content.nationalgeographic.com.es/medio/2023/11/29/golden-retriever-corriendo_7a50f15e_231129131211_800x800.jpg" alt="me" />
+          <img
+            src="https://content.nationalgeographic.com.es/medio/2023/11/29/golden-retriever-corriendo_7a50f15e_231129131211_800x800.jpg"
+
+            alt="me"
+          />
           <span className="label">ABOUT ME</span>
 
         </section>
@@ -85,8 +90,13 @@ function App() {
         </section>
         <section className="Skills">
           <div className="container">
-            <Skill />
-            <Skill />
+            {skills.map((skill, index) => (
+              <Skill
+                key={index}
+                name={skill.name}
+                percentage={skill.percentage}
+              />
+            ))}
           </div>
           <span className="label">SKILLS</span>
         </section>
@@ -97,9 +107,18 @@ function App() {
           <div className="web">
 
             <div className="projects">
-              <Project />
-              <Project />
-              <Project />
+              {projects.map((project, index) => (
+                <Project
+                  key={index}
+                  name={project.name}
+                  description={project.description}
+                  github={project.github}
+                  image={project.image}
+                  link={project.link}
+                  techs={project.techs}
+
+                />
+              ))}
             </div>
           </div>
 

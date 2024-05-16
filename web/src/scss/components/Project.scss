@@ -9,6 +9,10 @@
     gap: 20px;
     width: 35vw;
 
+    @media screen and (min-width: 1200px) {
+        gap: 20px;
+        width: 24vw;
+    }
 
     height: auto;
     //border: 1px solid rgb(68, 68, 255);
@@ -21,14 +25,31 @@
         color: $wic-azul-claro;
         padding: 15px;
         transform: scale(150%);
+        transition: color 0.3s ease;
+
+
+        &:hover {
+
+            color: $wic-azul;
+        }
 
     }
 
     .img {
+        height: 200px;
         width: 100%;
-        //margin-top: 30px;
-        height: auto;
+        object-fit: cover;
         align-items: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        filter: grayscale(100%);
+        transition: background-color 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+
+            background-color: transparent;
+            filter: grayscale(0%);
+        }
+
     }
 
     .title {

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Proyectos Paintones",
+        "description": "Group Full Stack project that allows you add and display project cards with static detail views. ",
+        "github": "https://github.com/BiancaMesa/promo-w-module-4-team-2",
+        "link": "https://proyectos-paintones.onrender.com",
+        "techs": "React JS | Express JS | MySQL",
+        "image": "./src/images/logo-landing-Bg7Hes1v.jpg"
+    },
+    {
+        "name": "Rick & Morty Character Finder",
+        "description": "React Front-End project to search and find characters of the show by name and species.",
+        "github": "https://github.com/AlbaM9/Rick-and-Morty-Searcher",
+        "link": "https://albam9.github.io/Rick-and-Morty-Searcher/",
+        "techs": "React JS | Node JS | Vite",
+        "image": "./src/images/Rick-And-Morty-Logo-700x394.png"
+    },
+    {
+        "name": "Anime Finder",
+        "description": "JavaScript Vanilla Front-End project to search and find anime shows, add them to your favorite list, and remove them.",
+        "github": "https://github.com/AlbaM9/Anime-Searcher",
+        "link": "http://albam9.github.io/Anime-Searcher/",
+        "techs": "JavaScript Vanilla | Node JS | Vite",
+        "image": "./src/images/61Msrdh4xtL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "name": "Library Gestion API",
+        "description": "Express JS CRUD API for library management. The project includes a small static view to list the books of the database.",
+        "github": "https://github.com/AlbaM9/API-Express.js-Library",
+        "link": " ",
+        "techs": "Express JS | Node JS | MySQL",
+        "image": "./src/images/fantasyAcademi.png"
+    }
+]

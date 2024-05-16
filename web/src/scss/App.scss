@@ -2,11 +2,17 @@
 @import 'core/Variables';
 @import 'layout/page';
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 
 
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    font-family: 'Roboto', sans-serif;
+    //font-family: 'Montserrat', sans-serif;
+    //font-family: 'Poppins', sans-serif;
+    //a 760px se ve perfecto. Hacer mobile first y desktop
 
 }
 
@@ -14,7 +20,14 @@ body {
     background-color: $azul-oscuro;
     margin-left: 20px;
     margin-right: 20px;
-    //cambiar el margen para las media queries
+
+
+    /* @media screen and (max-width: 860px) {
+      
+    }*/
+
+    /* Media query para pantallas de 1200 píxeles o más */
+
 }
 
 .label {
@@ -35,7 +48,6 @@ body {
     gap: 3vw;
 
 
-
     .intro {
         display: flex;
         flex-direction: column;
@@ -44,8 +56,8 @@ body {
 
 
         h1 {
-            color: $wic-verde-claro;
-            font-size: 70px;
+            color: $wic-azul;
+            font-size: 55px;
         }
 
         h2 {
@@ -131,13 +143,19 @@ body {
         flex-direction: column;
         gap: 15px;
         align-items: center;
-        margin-left: -40px;
+
 
 
         .icons {
-            color: $wic-gris-claro !important;
+            color: $wic-gris-claro ;
             padding: 5px;
-            transform: scale(130%)
+            transform: scale(130%);
+            transition: color 0.2s ease;
+
+            &:hover {
+
+                color: $wic-azul;
+            }
         }
 
 
@@ -154,20 +172,33 @@ body {
     flex-direction: row;
     justify-content: end;
     align-items: start;
-    gap: 7vw;
+    gap: 2vw;
 
 
 
     img {
         width: 300px;
         border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.6);
+        filter: grayscale(100%);
+        transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+
+
+
+        &:hover {
+            transform: scale(110%);
+            background-color: transparent;
+            filter: grayscale(0%);
+        }
     }
 
     p {
-        width: 30vw;
+        width: 32vw;
         color: $wic-gris-claro;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 25px;
+
+
     }
 
 }
@@ -210,10 +241,15 @@ body {
 
         h2 {
             color: $wic-gris-claro;
-            font-size: 20px;
+            font-size: 15px;
             width: 15vw;
             height: auto;
-            padding-bottom: 15px;
+            padding: 15px;
+
+            @media screen and (min-width: 1200px) {
+                width: 12vw;
+
+            }
 
         }
     }
@@ -224,13 +260,19 @@ body {
     margin-top: 25vh;
     display: flex;
     justify-content: end;
-    gap: 10vw;
+    gap: 3vw;
+
+
 
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8vw;
 
+        @media screen and (min-width: 1200px) {
+            gap: 3vw;
+
+        }
 
     }
 
@@ -242,6 +284,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: start;
+    gap: 1vw;
 
 
 
@@ -249,6 +292,13 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         //para media queries desktop añadir 1 al grid 
-        gap: 6vw;
+        gap: 3vw;
+
+        @media screen and (min-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5vw;
+        }
+
+
     }
 }

@@ -1,15 +1,18 @@
 import React from 'react'
 import "../scss/components/Skill.scss";
 
-function Skill() {
+function Skill({ name, percentage }) {
     return (
         <div className='skillStyle'>
             <div className='nameBar'>
-                <span>JavaScript</span>
-                <div></div>
+                <span>{name}</span>
+                <div
+                    className='barFill'
+                    style={{ width: `${percentage}%` }}
+                ></div>
             </div>
             <div className='Percentage'>
-                90%
+                {percentage}%
             </div>
         </div>
     )

@@ -3,7 +3,7 @@
 .header {
     display: flex;
     justify-content: center;
-    gap: 35vw;
+    gap: 23vw;
     padding: 30px;
     align-items: center;
 
@@ -27,6 +27,12 @@
     li {
         color: white;
         font-size: 18px;
+        transition: color 0.3s ease;
+
+        &:hover {
+
+            color: $wic-azul;
+        }
 
         a {
             color: white;
@@ -34,6 +40,12 @@
             border: 2px solid $wic-rosa;
             font-size: 18px;
             border-radius: 10px;
+            transition: color 0.3s ease;
+
+            &:hover {
+
+                color: $wic-azul;
+            }
         }
     }
 }
