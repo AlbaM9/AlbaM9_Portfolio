@@ -15,7 +15,7 @@ function Header() {
                     <li>CONTACT</li>
                     <li>
                         {/*subir a drive el curri y adjuntar el el enlace para descargar el cv*/}
-                        <a href="" download="nombre_del_archivo.pdf">
+                        <a href="" download="Alba_Melchor_Gomez_CV.pdf">
                             CV </a>
                     </li>
                 </ul>

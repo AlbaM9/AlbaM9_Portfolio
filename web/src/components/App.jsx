@@ -20,6 +20,12 @@ import projects from '../data/webProjects.json';
 
 
 function App() {
+
+  const [selectedCategory, setSelectedCategory] = useState('web');
+  const filteredProjects = projects.filter(project =>
+    selectedCategory === 'web' ? project.category === 'web' : project.category === 'videogame'
+  );
+
   return (
     <>
 
@@ -32,7 +38,7 @@ function App() {
             <li><a href="https://github.com/AlbaM9" target="_blank"><FontAwesomeIcon icon={faGithubAlt} className="icons" /></a></li>
             <li><a href="https://albam9.itch.io" target="_blank"><FontAwesomeIcon icon={faItchIo} className="icons" /></a></li>
             <li><a href="https://www.linkedin.com/in/albam9/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} className="icons" /></a></li>
-            <li className="label">FOLLOW ME</li>
+            <li className="label followMelabel">FOLLOW ME</li>
 
           </ul>
           <div className="intro">
@@ -46,8 +52,9 @@ function App() {
               </ul>
             </div>
             <div>
-              <button>GET CV</button>
-              <button className="contactBtn">CONTACT ME</button>
+              <a href="" download="Alba_Melchor_Gomez_CV.pdf">GET CV</a>
+              <a href="mailto:albamelchorgomez@gmail.com" className="contactBtn">CONTACT ME</a>
+
             </div>
           </div>
 
@@ -63,29 +70,31 @@ function App() {
           <span className="label">ABOUT ME</span>
 
         </section>
+
         <section className="Passions">
           <span className="label">PASSIONS</span>
-          <div>
-            <span><FontAwesomeIcon icon={faCube} className="passIcons1" /></span>
-            <h2>3D Printing and Modeling</h2>
+          <div className="containerPass">
+            <div>
+              <span><FontAwesomeIcon icon={faCube} className="passIcons1" /></span>
+              <h2>3D Printing and Modeling</h2>
+            </div>
+            <div>
+              <span><FontAwesomeIcon icon={faMusic} className="passIcons" /></span>
+              <h2>Music</h2>
+            </div>
+            <div>
+              <span><FontAwesomeIcon icon={faPalette} className="passIcons1" /></span>
+              <h2>Art</h2>
+            </div>
+            <div>
+              <span><FontAwesomeIcon icon={faGamepad} className="passIcons" /></span>
+              <h2>Videogames</h2>
+            </div>
+            <div>
+              <span><FontAwesomeIcon icon={faBook} className="passIcons1" /></span>
+              <h2>Reading</h2>
+            </div>
           </div>
-          <div>
-            <span><FontAwesomeIcon icon={faMusic} className="passIcons" /></span>
-            <h2>Music</h2>
-          </div>
-          <div>
-            <span><FontAwesomeIcon icon={faPalette} className="passIcons1" /></span>
-            <h2>Art</h2>
-          </div>
-          <div>
-            <span><FontAwesomeIcon icon={faGamepad} className="passIcons" /></span>
-            <h2>Videogames</h2>
-          </div>
-          <div>
-            <span><FontAwesomeIcon icon={faBook} className="passIcons1" /></span>
-            <h2>Reading</h2>
-          </div>
-
 
         </section>
         <section className="Skills">
@@ -102,23 +111,32 @@ function App() {
         </section>
 
         <section className="Portfolio">
-
           <span className="label">PORTFOLIO</span>
-          <div className="web">
 
-            <div className="projects">
-              {projects.map((project, index) => (
-                <Project
-                  key={index}
-                  name={project.name}
-                  description={project.description}
-                  github={project.github}
-                  image={project.image}
-                  link={project.link}
-                  techs={project.techs}
 
-                />
-              ))}
+
+          <div className="projContainer">
+
+            <div className="projMenu">
+              <span className={`projBtn ${selectedCategory === 'web' ? 'active' : ''}`} onClick={() => setSelectedCategory('web')}>WEB</span>
+              <span className={`projBtn ${selectedCategory === 'videogame' ? 'active' : ''}`} onClick={() => setSelectedCategory('videogame')}>VIDEOGAMES</span>
+            </div>
+            <div className="web">
+
+              <div className="projects">
+                {filteredProjects.map((project, index) => (
+                  <Project
+                    key={index}
+                    name={project.name}
+                    description={project.description}
+                    github={project.github}
+                    image={project.image}
+                    link={project.link}
+                    techs={project.techs}
+                  />
+                ))}
+
+              </div>
             </div>
           </div>
 

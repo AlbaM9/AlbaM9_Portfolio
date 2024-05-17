@@ -9,9 +9,16 @@
     gap: 20px;
     width: 35vw;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         gap: 20px;
         width: 24vw;
+    }
+
+    @media screen and (max-width: 806px) {
+
+        gap: 20px;
+        width: 65vw;
+
     }
 
     height: auto;

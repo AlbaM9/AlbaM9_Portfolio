@@ -5,7 +5,8 @@
         "github": "https://github.com/BiancaMesa/promo-w-module-4-team-2",
         "link": "https://proyectos-paintones.onrender.com",
         "techs": "React JS | Express JS | MySQL",
-        "image": "./src/images/logo-landing-Bg7Hes1v.jpg"
+        "image": "./src/images/logo-landing-Bg7Hes1v.jpg",
+        "category": "web"
     },
     {
         "name": "Rick & Morty Character Finder",
@@ -13,7 +14,8 @@
         "github": "https://github.com/AlbaM9/Rick-and-Morty-Searcher",
         "link": "https://albam9.github.io/Rick-and-Morty-Searcher/",
         "techs": "React JS | Node JS | Vite",
-        "image": "./src/images/Rick-And-Morty-Logo-700x394.png"
+        "image": "./src/images/Rick-And-Morty-Logo-700x394.png",
+        "category": "web"
     },
     {
         "name": "Anime Finder",
@@ -21,7 +23,8 @@
         "github": "https://github.com/AlbaM9/Anime-Searcher",
         "link": "http://albam9.github.io/Anime-Searcher/",
         "techs": "JavaScript Vanilla | Node JS | Vite",
-        "image": "./src/images/61Msrdh4xtL._AC_UF1000,1000_QL80_.jpg"
+        "image": "./src/images/61Msrdh4xtL._AC_UF1000,1000_QL80_.jpg",
+        "category": "web"
     },
     {
         "name": "Library Gestion API",
@@ -29,6 +32,34 @@
         "github": "https://github.com/AlbaM9/API-Express.js-Library",
         "link": " ",
         "techs": "Express JS | Node JS | MySQL",
-        "image": "./src/images/fantasyAcademi.png"
+        "image": "./src/images/fantasyAcademi.png",
+        "category": "web"
+    },
+    {
+        "name": "Rise Of The Dead Ones",
+        "description": "2D Pixel Art Metroidvania. Explore the woods, collect ítems and defeat the evil Necromancer.",
+        "github": "https://github.com/AlbaM9/Rise_Of_The_Dead_Ones",
+        "link": "https://albam9.itch.io/rise-of-the-dead-ones",
+        "techs": "Unity | C# ",
+        "image": "https://img.itch.zone/aW1nLzgyNDA2MDEucG5n/315x250%23c/i%2FjEx%2B.png",
+        "category": "videogame"
+    },
+    {
+        "name": "KALAKMUL",
+        "description": "Escape the maze 3D minigame. Can you find the treasure and escape alive?",
+        "github": "https://github.com/AlbaM9/KALAKMUL",
+        "link": "https://albam9.itch.io/kalakmul",
+        "techs": "Unity | C# ",
+        "image": "https://img.itch.zone/aW1nLzgxNDczMDUucG5n/315x250%23c/FS7bX4.png",
+        "category": "videogame"
+    },
+    {
+        "name": "The Sorcerer",
+        "description": "2D elemental Rogue-Like. Would you help the magician to get his powers back and escape?",
+        "github": "https://github.com/AlbaM9/The_Sorcerer",
+        "link": "https://albam9.itch.io/the-sorcerer",
+        "techs": "Unity | C# ",
+        "image": "https://img.itch.zone/aW1nLzg0MTk3MzYucG5n/315x250%23c/gtKYKl.png",
+        "category": "videogame"
     }
 ]

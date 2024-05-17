@@ -20,14 +20,21 @@ body {
     background-color: $azul-oscuro;
     margin-left: 20px;
     margin-right: 20px;
+    min-width: 410px;
 
+
+
+    @media screen and (min-width: 1280px) {
+        margin-left: 40px;
+        margin-right: 40px;
+
+    }
 
     /* @media screen and (max-width: 860px) {
       
     }*/
 
-    /* Media query para pantallas de 1200 píxeles o más */
-
+    //Media query para pantallas de 1200 píxeles o más
 }
 
 .label {
@@ -37,7 +44,29 @@ body {
     margin-top: 30px;
     padding: 5px;
     height: 30px;
+    width: 100px;
+
+    @media screen and (max-width: 806px) {
+
+        transform: rotate(0deg);
+        width: 70vw;
+
+    }
 }
+
+@media screen and (max-width: 806px) {
+
+    .followMelabel {
+        color: $wic-gris-claro;
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-top: 30px;
+        padding: 5px;
+        height: 30px;
+        width: 100px;
+    }
+}
+
 
 .Introduction {
 
@@ -46,6 +75,11 @@ body {
     flex-direction: row;
     justify-content: start;
     gap: 3vw;
+
+    @media screen and (min-width: 1280px) {
+        gap: 7vw;
+    }
+
 
 
     .intro {
@@ -58,6 +92,10 @@ body {
         h1 {
             color: $wic-azul;
             font-size: 55px;
+
+            @media screen and (min-width: 1280px) {
+                font-size: 60px;
+            }
         }
 
         h2 {
@@ -76,6 +114,7 @@ body {
             flex-direction: row;
             justify-content: space-between;
             align-items: start;
+
             //gap: 30px;
 
 
@@ -83,6 +122,7 @@ body {
                 display: flex;
                 flex-direction: row;
                 gap: 5px;
+
 
                 li {
 
@@ -116,7 +156,12 @@ body {
             justify-content: end;
             gap: 15px;
 
-            button {
+            @media screen and (max-width: 806px) {
+
+                justify-content: start;
+            }
+
+            a {
                 color: white;
                 padding: 8px;
                 border: 2px solid $wic-rosa;
@@ -124,6 +169,12 @@ body {
                 border-radius: 10px;
                 background-color: rgba(255, 99, 247, 0.212);
                 width: auto;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(105%);
+                }
 
 
             }
@@ -170,10 +221,20 @@ body {
     margin-top: 40vh;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     align-items: start;
-    gap: 2vw;
+    gap: 7vw;
 
+    @media screen and (max-width: 806px) {
+
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+
+    @media screen and (min-width: 1280px) {
+        gap: 10vw;
+    }
 
 
     img {
@@ -183,7 +244,9 @@ body {
         filter: grayscale(100%);
         transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
 
-
+        @media screen and (min-width: 1280px) {
+            width: 350px;
+        }
 
         &:hover {
             transform: scale(110%);
@@ -198,6 +261,13 @@ body {
         font-size: 16px;
         line-height: 25px;
 
+        @media screen and (max-width: 806px) {
+
+
+            width: 50vw;
+        }
+
+
 
     }
 
@@ -207,70 +277,136 @@ body {
     margin-top: 25vh;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    gap: 1vw;
+    justify-content: center;
+    gap: 4vw;
 
+    @media screen and (min-width: 1280px) {
+        gap: 5vw;
+    }
+
+    @media screen and (max-width: 806px) {
+
+        margin-top: 20vh;
+        flex-direction: column;
+        align-items: center;
+    }
 
     //width: 100px;
-
-
-    div {
-        //border: 2px solid $wic-azul-claro;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-
+    .containerPass {
+        margin-right: 10vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 3vw;
+        row-gap: 3vh;
 
 
 
-        .passIcons {
-            margin-top: 5vh;
-            color: $wic-rosa;
-            transform: scale(250%);
-            margin-bottom: 5vh;
+        @media screen and (min-width: 1280px) {
+            margin-left: 3vw;
+            column-gap: 3vw;
+            row-gap: 5vh;
 
         }
 
-        .passIcons1 {
-            margin-top: 5vh;
-            color: $wic-azul-claro;
-            transform: scale(250%);
-            margin-bottom: 5vh;
+        @media screen and (max-width: 806px) {
 
+            margin-top: 5vh;
+            margin-right: 2vw;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
-        h2 {
-            color: $wic-gris-claro;
-            font-size: 15px;
-            width: 15vw;
-            height: auto;
-            padding: 15px;
+        div {
+            //border: 2px solid $wic-azul-claro;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
 
-            @media screen and (min-width: 1200px) {
-                width: 12vw;
+
+
+
+            .passIcons {
+                margin-top: 5vh;
+                color: $wic-rosa;
+                transform: scale(250%);
+                margin-bottom: 5vh;
 
             }
 
+            .passIcons1 {
+                margin-top: 5vh;
+                color: $wic-azul-claro;
+                transform: scale(250%);
+                margin-bottom: 5vh;
+
+            }
+
+            h2 {
+                color: $wic-gris-claro;
+                font-size: 15px;
+                width: 12vw;
+                height: auto;
+                padding: 15px;
+
+                @media screen and (min-width: 1280px) {
+                    width: 12vw;
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width: 806px) {
+                    width: 21vw;
+                    font-size: 16px;
+
+                }
+
+            }
         }
+
     }
 
 }
 
+
+
 .Skills {
+
     margin-top: 25vh;
     display: flex;
-    justify-content: end;
-    gap: 3vw;
+    justify-content: left;
+    gap: 11vw;
+
+    @media screen and (max-width: 806px) {
+        margin-top: 20vh;
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 10vw;
+    }
 
 
 
     .container {
+        margin-left: 10vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8vw;
+        column-gap: 7vw;
+        row-gap: 3vh;
 
-        @media screen and (min-width: 1200px) {
-            gap: 3vw;
+        @media screen and (max-width: 806px) {
+
+            flex-direction: column-reverse;
+            margin-left: 1vw;
+            column-gap: 4vw;
+
+
+        }
+
+        @media screen and (min-width: 1280px) {
+            margin-left: 8vw;
+            column-gap: 8vw;
+            row-gap: 5vh;
 
         }
 
@@ -283,21 +419,72 @@ body {
     margin-top: 25vh;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    gap: 1vw;
+    justify-content: right;
+    gap: 6vw;
+
+    @media screen and (max-width: 806px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20vh;
+    }
+
+    @media screen and (min-width: 1280px) {
+
+        gap: 3vw;
+    }
+
+    .projMenu {
+        margin-bottom: 3vh;
+        display: flex;
+        gap: 1vw;
 
 
+        .projBtn {
+
+            color: $wic-gris-claro;
+
+            border: 1px solid $wic-rosa;
+            padding: 5px;
+            height: 30px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(24, 255, 147, 0.192);
+            }
+
+
+
+        }
+
+        .active {
+            background-color: rgba(74, 238, 183, 0.1);
+        }
+
+    }
 
     .projects {
+        margin-right: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         //para media queries desktop añadir 1 al grid 
-        gap: 3vw;
+        column-gap: 6vw;
+        row-gap: 2vh;
+        //gap: 3vw;
 
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1280px) {
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 5vw;
+            column-gap: 5vw;
+            margin-right: 20px;
         }
+
+        @media screen and (max-width: 806px) {
+            grid-template-columns: 1fr;
+            row-gap: 3vh;
+            margin-right: 5px;
+        }
+
 
 
     }
