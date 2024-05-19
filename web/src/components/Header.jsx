@@ -3,6 +3,7 @@ import { useState } from 'react';
 import "../scss/components/Header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFont } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-scroll';
 
 
 
@@ -17,13 +18,13 @@ function Header() {
             <nav className="header">
                 <div><FontAwesomeIcon icon={faFont} className="logo" /></div>
                 <ul className={`navMenu ${menuOpen ? 'active' : ''}`}>
-                    <li>ABOUT</li>
-                    <li>SKILLS</li>
-                    <li>PORTFOLIO</li>
-                    <li>CONTACT</li>
-                    <li>
+                    <li><Link to="about" smooth={true} duration={500}>ABOUT</Link></li>
+                    <li><Link to="skills" smooth={true} duration={500}>SKILLS</Link></li>
+                    <li><Link to="portfolio" smooth={true} duration={500}>PORTFOLIO</Link></li>
+                    <li><Link to="contact" smooth={true} duration={500}>CONTACT</Link></li>
+                    <li >
                         {/*subir a drive el curri y adjuntar el el enlace para descargar el cv*/}
-                        <a href="" download="Alba_Melchor_Gomez_CV.pdf">
+                        <a className="btn" href="" download="Alba_Melchor_Gomez_CV.pdf">
                             CV </a>
                     </li>
                 </ul>

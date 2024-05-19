@@ -44,7 +44,7 @@ function App() {
 
           </ul>
           <div className="intro">
-            <h3>Hello, I am</h3>
+            <h3>Hello! , I am</h3>
             <h1>Alba Melchor Gómez</h1>
             <h2>Full Stack Developer</h2>
             <div className="xtra">
@@ -56,12 +56,11 @@ function App() {
             <div>
               <a href="" download="Alba_Melchor_Gomez_CV.pdf">GET CV</a>
               <a href="mailto:albamelchorgomez@gmail.com" className="contactBtn">CONTACT ME</a>
-
             </div>
           </div>
 
         </section>
-        <section className="About">
+        <section className="About" id="about">
           <p>
             I am a passionate web developer with experience in technologies like React and Node.js. I am currently seeking new opportunities that allow me to continue learning and growing in this ever-evolving sector. I am committed to contributing my energy and creativity to challenging projects while continuing to expand my technical skills and adapting to an environment that fosters innovation and excellence.</p>
           <ImageComponent src="https://content.nationalgeographic.com.es/medio/2023/11/29/golden-retriever-corriendo_7a50f15e_231129131211_800x800.jpg" alt="Description 1" />
@@ -69,7 +68,6 @@ function App() {
           <span className="label">ABOUT ME</span>
 
         </section>
-
         <section className="Passions">
           <span className="label">PASSIONS</span>
           <div className="containerPass">
@@ -96,7 +94,7 @@ function App() {
           </div>
 
         </section>
-        <section className="Skills">
+        <section className="Skills" id="skills">
           <div className="container">
             {skills.map((skill, index) => (
               <Skill
@@ -108,8 +106,7 @@ function App() {
           </div>
           <span className="label">SKILLS</span>
         </section>
-
-        <section className="Portfolio">
+        <section className="Portfolio" id="portfolio">
           <span className="label">PORTFOLIO</span>
 
 
@@ -141,8 +138,14 @@ function App() {
 
 
         </section>
-        <section className="Contact">
+        <section className="Contact" id="contact">
 
+          <div>
+            <p>I am interested in working with any company that thinks my skill will be helpful for them. If you are looking for someone like me, please let me know. Or you can just 'say hi' to me.</p>
+            <a href="mailto:albamelchorgomez@gmail.com" className="contactBtn">CONTACT ME</a>
+          </div>
+          <span>Email: albamelchorgomez@gmail.com</span>
+          <span className="label">CONTACT</span>
 
         </section>
       </body >
