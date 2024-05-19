@@ -8,6 +8,7 @@
     align-items: center;
     min-width: 410px;
 
+
     @media screen and (min-width: 1280px) {
         gap: 35vw;
     }
@@ -46,7 +47,7 @@
 
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 806px) {
         .hamburger {
             display: flex;
 
@@ -78,7 +79,7 @@
             border-radius: 10px;
             transition: color 0.3s ease;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 806px) {
                 font-size: 15px;
                 padding: 3px;
             }
@@ -89,7 +90,7 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 806px) {
         padding-top: 15px;
         padding-bottom: 15px;
         flex-direction: column;
@@ -109,7 +110,7 @@
         }
 
         li {
-            margin-left: 30px;
+            margin-left: 50px;
             text-align: left;
 
             width: 100%;

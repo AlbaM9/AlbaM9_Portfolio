@@ -44,7 +44,7 @@ body {
     margin-top: 30px;
     padding: 5px;
     height: 30px;
-    width: 100px;
+    width: 130px;
 
 
     @media screen and (max-width: 806px) {
@@ -91,22 +91,10 @@ body {
     }
 }
 
-@media screen and (max-width: 806px) {
-
-    .followMelabel {
-        color: $wic-gris-claro;
-        transform: rotate(270deg);
-        background-color: rgba(255, 255, 255, 0.1);
-        margin-top: 30px;
-        padding: 5px;
-        height: 30px;
-        width: 100px;
-
-        &::before {
-            width: 0%;
-        }
-    }
+.followMelabel {
+    width: auto;
 }
+
 
 
 .Introduction {
@@ -121,7 +109,12 @@ body {
         gap: 7vw;
     }
 
-
+    @media screen and (max-width: 806px) {
+        margin-top: 23vh;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
 
 
     .intro {
@@ -141,6 +134,7 @@ body {
 
             @media screen and (max-width: 806px) {
                 font-size: 40px;
+
             }
         }
 
@@ -165,7 +159,13 @@ body {
             justify-content: space-between;
             align-items: start;
 
-            //gap: 30px;
+            @media screen and (max-width: 806px) {
+
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
 
 
             ul {
@@ -214,8 +214,13 @@ body {
 
             @media screen and (max-width: 806px) {
 
-                justify-content: start;
+                flex-direction: column;
+                align-items: center;
+
+
             }
+
+
 
             a {
                 color: white;
@@ -251,6 +256,14 @@ body {
         gap: 15px;
         align-items: center;
 
+        @media screen and (max-width: 806px) {
+
+            flex-direction: column-reverse;
+
+
+
+        }
+
 
 
         .icons {
@@ -258,6 +271,8 @@ body {
             padding: 5px;
             transform: scale(130%);
             transition: color 0.2s ease;
+
+
 
             &:hover {
 
@@ -278,13 +293,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: start;
-    gap: 7vw;
+    align-items: center;
+    gap: 4vw;
+    margin-left: 5vw;
 
     @media screen and (max-width: 806px) {
 
         flex-direction: column-reverse;
         align-items: center;
+        gap: 10vw;
+        margin-left: 0vw;
     }
 
 
@@ -294,7 +312,7 @@ body {
 
 
     img {
-        width: 300px;
+        width: 250px;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.6);
         filter: grayscale(100%);
@@ -312,7 +330,7 @@ body {
     }
 
     p {
-        width: 32vw;
+        width: 50vw;
         color: $wic-gris-claro;
         font-size: 16px;
         line-height: 25px;
@@ -320,7 +338,7 @@ body {
         @media screen and (max-width: 806px) {
 
 
-            width: 50vw;
+            width: 70vw;
         }
 
 
@@ -345,6 +363,7 @@ body {
         margin-top: 20vh;
         flex-direction: column;
         align-items: center;
+
     }
 
     //width: 100px;
@@ -428,12 +447,14 @@ body {
     margin-top: 25vh;
     display: flex;
     justify-content: left;
-    gap: 11vw;
+    gap: 5vw;
 
     @media screen and (max-width: 806px) {
         margin-top: 20vh;
         flex-direction: column-reverse;
         align-items: center;
+        gap: 10vw;
+
 
     }
 
@@ -444,7 +465,7 @@ body {
 
 
     .container {
-        margin-left: 10vw;
+        margin-left: 5vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 7vw;
@@ -484,6 +505,9 @@ body {
         justify-content: center;
         align-items: center;
         margin-top: 20vh;
+        gap: 10vw;
+
+
     }
 
     @media screen and (min-width: 1280px) {
