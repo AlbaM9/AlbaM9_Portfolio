@@ -16,6 +16,8 @@ import "../scss/App.scss";
 
 import skills from '../data/skills.json';
 import projects from '../data/webProjects.json';
+import ImageComponent from './ImageComponent';
+
 
 
 
@@ -62,11 +64,8 @@ function App() {
         <section className="About">
           <p>
             I am a passionate web developer with experience in technologies like React and Node.js. I am currently seeking new opportunities that allow me to continue learning and growing in this ever-evolving sector. I am committed to contributing my energy and creativity to challenging projects while continuing to expand my technical skills and adapting to an environment that fosters innovation and excellence.</p>
-          <img
-            src="https://content.nationalgeographic.com.es/medio/2023/11/29/golden-retriever-corriendo_7a50f15e_231129131211_800x800.jpg"
+          <ImageComponent src="https://content.nationalgeographic.com.es/medio/2023/11/29/golden-retriever-corriendo_7a50f15e_231129131211_800x800.jpg" alt="Description 1" />
 
-            alt="me"
-          />
           <span className="label">ABOUT ME</span>
 
         </section>

@@ -14,7 +14,7 @@
         width: 24vw;
     }
 
-    @media screen and (max-width: 806px) {
+    @media screen and (max-width: 767px) {
 
         gap: 20px;
         width: 65vw;
@@ -56,6 +56,16 @@
             background-color: transparent;
             filter: grayscale(0%);
         }
+
+        @media screen and (max-width: 767px) {
+            transition: background-color 0.7s ease, filter 2.5s ease;
+
+            &.in-view {
+                filter: grayscale(0%);
+            }
+
+        }
+
 
     }
 

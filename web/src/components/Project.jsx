@@ -1,5 +1,6 @@
 import React from 'react'
 import "../scss/components/Project.scss";
+import ImageComponent from './ImageComponent'; // Asegúrate de la ruta correcta
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faItchIo } from '@fortawesome/free-brands-svg-icons';
@@ -8,7 +9,8 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 function Project({ name, description, github, image, link, techs }) {
     return (
         <section className='projectCard'>
-            <img className='img' src={image} />
+            <ImageComponent src={image} alt="Description 1" />
+
             <h2 className='title'> {name}</h2>
             <p className='desc'>{description}</p>
             <span className='links'>
