@@ -46,10 +46,47 @@ body {
     height: 30px;
     width: 100px;
 
+
     @media screen and (max-width: 806px) {
 
         transform: rotate(0deg);
-        width: 70vw;
+        width: auto;
+
+        &::before {
+
+            content: '';
+            position: absolute;
+            width: 100%;
+            /* Ajusta el ancho según tus necesidades */
+            height: 2px;
+            background-color: $wic-azul-claro;
+            /* Color rosa */
+            top: 50%;
+            left: 50%;
+            transform: translateX(50%);
+            /* Centra la línea horizontal y verticalmente */
+            z-index: -1;
+
+        }
+
+        &::after {
+
+            content: '';
+            position: absolute;
+            width: 100%;
+            /* Ajusta el ancho según tus necesidades */
+            height: 2px;
+            background-color: $wic-azul-claro;
+            /* Color rosa */
+            top: 50%;
+            left: 50%;
+            transform: translateX(-150%);
+            /* Centra la línea horizontal y verticalmente */
+            z-index: -1;
+
+        }
+
+
 
     }
 }
@@ -64,6 +101,10 @@ body {
         padding: 5px;
         height: 30px;
         width: 100px;
+
+        &::before {
+            width: 0%;
+        }
     }
 }
 
@@ -82,6 +123,7 @@ body {
 
 
 
+
     .intro {
         display: flex;
         flex-direction: column;
@@ -96,11 +138,19 @@ body {
             @media screen and (min-width: 1280px) {
                 font-size: 60px;
             }
+
+            @media screen and (max-width: 806px) {
+                font-size: 40px;
+            }
         }
 
         h2 {
             color: $wic-azul-claro ;
             font-size: 30px;
+
+            @media screen and (max-width: 806px) {
+                font-size: 20px;
+            }
 
         }
 
@@ -124,11 +174,17 @@ body {
                 gap: 5px;
 
 
+
+
                 li {
 
                     color: $wic-gris-claro;
                     list-style: none;
                     font-size: 18px;
+
+                    @media screen and (max-width: 806px) {
+                        font-size: 15px;
+                    }
 
 
                     &::after {
@@ -420,7 +476,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    gap: 6vw;
+    gap: 3vw;
 
     @media screen and (max-width: 806px) {
         display: flex;
@@ -432,22 +488,28 @@ body {
 
     @media screen and (min-width: 1280px) {
 
-        gap: 3vw;
+        gap: 2vw;
     }
 
     .projMenu {
         margin-bottom: 3vh;
         display: flex;
+        //justify-content: center;
         gap: 1vw;
+
+        @media screen and (max-width: 806px) {
+            justify-content: center;
+            gap: 5vw;
+        }
 
 
         .projBtn {
 
             color: $wic-gris-claro;
 
-            border: 1px solid $wic-rosa;
+            border: 2px solid $wic-rosa;
             padding: 5px;
-            height: 30px;
+            border-radius: 10px;
 
             &:hover {
                 cursor: pointer;

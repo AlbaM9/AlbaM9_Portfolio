@@ -118,7 +118,7 @@ function App() {
           <div className="projContainer">
 
             <div className="projMenu">
-              <span className={`projBtn ${selectedCategory === 'web' ? 'active' : ''}`} onClick={() => setSelectedCategory('web')}>WEB</span>
+              <span className={`projBtn ${selectedCategory === 'web' ? 'active' : ''}`} onClick={() => setSelectedCategory('web')}>WEB PROJECTS</span>
               <span className={`projBtn ${selectedCategory === 'videogame' ? 'active' : ''}`} onClick={() => setSelectedCategory('videogame')}>VIDEOGAMES</span>
             </div>
             <div className="web">
