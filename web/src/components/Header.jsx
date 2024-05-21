@@ -24,7 +24,8 @@ function Header() {
                     <li><Link to="contact" smooth={true} duration={500}>CONTACT</Link></li>
                     <li >
                         {/*subir a drive el curri y adjuntar el el enlace para descargar el cv*/}
-                        <a className="btn" href="" download="Alba_Melchor_Gomez_CV.pdf">
+
+                        <a className="btn" href="https://drive.google.com/uc?export=download&id=1o1ICCCv1yddJP2pVmRUeSdfjMQJ6PXHM" download="Alba_Melchor_Gomez_CV.pdf">
                             CV </a>
                     </li>
                 </ul>

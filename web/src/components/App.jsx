@@ -54,7 +54,7 @@ function App() {
               </ul>
             </div>
             <div>
-              <a href="" download="Alba_Melchor_Gomez_CV.pdf">GET CV</a>
+              <a href="https://drive.google.com/uc?export=download&id=1o1ICCCv1yddJP2pVmRUeSdfjMQJ6PXHM" download="Alba_Melchor_Gomez_CV.pdf">GET CV</a>
               <a href="mailto:albamelchorgomez@gmail.com" className="contactBtn">CONTACT ME</a>
             </div>
           </div>
