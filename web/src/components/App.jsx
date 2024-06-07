@@ -37,7 +37,7 @@ function App() {
           <ul className="social">
             <li><a href="https://github.com/AlbaM9" target="_blank"><FontAwesomeIcon icon={faGithubAlt} className="icons" /></a></li>
             <li><a href="https://albam9.itch.io" target="_blank"><FontAwesomeIcon icon={faItchIo} className="icons" /></a></li>
-            <li><a href="https://www.linkedin.com/in/albam9/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} className="icons" /></a></li>
+            <li><a href="https://www.linkedin.com/in/albamelchor/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} className="icons" /></a></li>
             <li className="label followMelabel">FOLLOW ME</li>
 
           </ul>
@@ -52,7 +52,8 @@ function App() {
               </ul>
             </div>
             <div>
-              <a href="https://drive.google.com/uc?export=download&id=1o1ICCCv1yddJP2pVmRUeSdfjMQJ6PXHM" download="Alba_Melchor_Gomez_CV.pdf">GET CV</a>
+              <a href="https://drive.google.com/uc?export=download&id=1irz82_5uEPBmpjQjhp46SrwfQjBBNUOy" download="Alba_Melchor_Gomez_CV.pdf">GET CV</a>
+
               <a href="mailto:albamelchorgomez@gmail.com" className="contactBtn">CONTACT ME</a>
             </div>
           </div>
