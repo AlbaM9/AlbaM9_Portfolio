@@ -31,10 +31,8 @@ function App() {
   return (
     <>
 
-      <script src="https://kit.fontawesome.com/81f7d3236c.js" crossOrigin="anonymous"></script>
-
       <Header />
-      <body>
+      <>
         <section className="Introduction">
           <ul className="social">
             <li><a href="https://github.com/AlbaM9" target="_blank"><FontAwesomeIcon icon={faGithubAlt} className="icons" /></a></li>
@@ -148,7 +146,7 @@ function App() {
           <span className="label">CONTACT</span>
 
         </section>
-      </body >
+      </ >
 
     </>
   )

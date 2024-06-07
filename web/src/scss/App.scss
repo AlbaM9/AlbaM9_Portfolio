@@ -17,6 +17,29 @@
 }
 
 body {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background-image: url('./public/images/galaxia_apaisado.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        opacity: 0.6;
+        z-index: -1;
+
+        @media screen and (max-width: 767px) {
+            opacity: 0.2;
+            background-position: top center;
+        }
+    }
+
+
     background-color: $azul-oscuro;
     margin-left: 20px;
     margin-right: 20px;
@@ -35,598 +58,488 @@ body {
     }*/
 
     //Media query para pantallas de 1200 píxeles o más
-}
 
-.label {
-    color: $wic-gris-claro;
-    transform: rotate(270deg);
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-top: 30px;
-    padding: 5px;
-    height: 30px;
-    width: 130px;
+    .label {
+        color: $wic-gris-claro;
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-top: 30px;
+        padding: 5px;
+        height: 30px;
+        width: 130px;
 
 
-    @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767px) {
 
-        transform: rotate(0deg);
+            transform: rotate(0deg);
+            width: auto;
+
+            &::before {
+
+                content: '';
+                position: absolute;
+                width: 100%;
+                /* Ajusta el ancho según tus necesidades */
+                height: 2px;
+                background-color: $wic-azul-claro;
+                /* Color rosa */
+                top: 50%;
+                left: 50%;
+                transform: translateX(50%);
+                /* Centra la línea horizontal y verticalmente */
+                z-index: -1;
+
+            }
+
+            &::after {
+
+                content: '';
+                position: absolute;
+                width: 100%;
+                /* Ajusta el ancho según tus necesidades */
+                height: 2px;
+                background-color: $wic-azul-claro;
+                /* Color rosa */
+                top: 50%;
+                left: 50%;
+                transform: translateX(-150%);
+                /* Centra la línea horizontal y verticalmente */
+                z-index: -1;
+
+            }
+
+
+
+        }
+    }
+
+    .followMelabel {
         width: auto;
-
-        &::before {
-
-            content: '';
-            position: absolute;
-            width: 100%;
-            /* Ajusta el ancho según tus necesidades */
-            height: 2px;
-            background-color: $wic-azul-claro;
-            /* Color rosa */
-            top: 50%;
-            left: 50%;
-            transform: translateX(50%);
-            /* Centra la línea horizontal y verticalmente */
-            z-index: -1;
-
-        }
-
-        &::after {
-
-            content: '';
-            position: absolute;
-            width: 100%;
-            /* Ajusta el ancho según tus necesidades */
-            height: 2px;
-            background-color: $wic-azul-claro;
-            /* Color rosa */
-            top: 50%;
-            left: 50%;
-            transform: translateX(-150%);
-            /* Centra la línea horizontal y verticalmente */
-            z-index: -1;
-
-        }
-
-
-
-    }
-}
-
-.followMelabel {
-    width: auto;
-}
-
-.Introduction {
-
-    margin-top: 30vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 3vw;
-
-    @media screen and (min-width: 1280px) {
-        gap: 7vw;
     }
 
-    @media screen and (max-width: 767px) {
-        margin-top: 23vh;
-        flex-direction: column-reverse;
-
-        //align-items: center;
-        text-align: center;
-        max-width: 100vw;
-    }
+    .Introduction {
 
 
-    .intro {
+
+        margin-top: 30vh;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: start;
+        gap: 3vw;
 
-
-
-        h1 {
-            color: $wic-azul;
-            font-size: 55px;
-
-            @media screen and (min-width: 1280px) {
-                font-size: 60px;
-            }
-
-            @media screen and (max-width: 767px) {
-                font-size: 40px;
-                font-size: 35px;
-
-            }
+        @media screen and (min-width: 1280px) {
+            gap: 7vw;
         }
 
-        h2 {
-            color: $wic-azul-claro ;
-            font-size: 30px;
+        @media screen and (max-width: 767px) {
+            margin-top: 23vh;
+            flex-direction: column-reverse;
 
-            @media screen and (max-width: 767px) {
-                font-size: 20px;
-            }
-
+            //align-items: center;
+            text-align: center;
+            max-width: 100vw;
         }
 
-        h3 {
-            color: $wic-rosa;
-            font-size: 20px;
-        }
 
-        .xtra {
+        .intro {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: start;
-
-            @media screen and (max-width: 767px) {
-
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+            flex-direction: column;
+            gap: 10px;
 
 
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                gap: 5px;
+            h1 {
+                color: $wic-azul;
+                font-size: 55px;
 
+                @media screen and (min-width: 1280px) {
+                    font-size: 60px;
+                }
 
-
-
-                li {
-
-                    color: $wic-gris-claro;
-                    list-style: none;
-                    font-size: 18px;
-
-                    @media screen and (max-width: 767px) {
-                        font-size: 15px;
-                    }
-
-
-                    &::after {
-                        // Utiliza ::after para agregar contenido después de cada li
-                        content: " ● "; // Añade contenido vacío
-                        //transform: translateX(-10px);
-                        color: $wic-azul-claro;
-
-                    }
-
+                @media screen and (max-width: 767px) {
+                    font-size: 40px;
+                    font-size: 35px;
 
                 }
             }
 
+            h2 {
+                color: $wic-azul-claro ;
+                font-size: 30px;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 20px;
+                }
+
+            }
+
+            h3 {
+                color: $wic-rosa;
+                font-size: 20px;
+            }
+
+            .xtra {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: start;
+
+                @media screen and (max-width: 767px) {
+
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+
+
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
 
 
 
 
-        }
+                    li {
 
-        div {
-            margin-top: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-            gap: 15px;
+                        color: $wic-gris-claro;
+                        list-style: none;
+                        font-size: 18px;
 
-            @media screen and (max-width: 767px) {
+                        @media screen and (max-width: 767px) {
+                            font-size: 15px;
+                        }
 
-                flex-direction: column;
-                align-items: center;
+
+                        &::after {
+                            // Utiliza ::after para agregar contenido después de cada li
+                            content: " ● "; // Añade contenido vacío
+                            //transform: translateX(-10px);
+                            color: $wic-azul-claro;
+
+                        }
+
+
+                    }
+                }
+
+
+
+
+
+            }
+
+            div {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                gap: 15px;
+
+                @media screen and (max-width: 767px) {
+
+                    flex-direction: column;
+                    align-items: center;
+
+                    a {
+
+                        font-size: 10px;
+
+
+
+                    }
+
+                    .contactBtn {
+                        border: 2px solid $wic-azul-claro;
+                        font-size: 13px;
+                        // background-color: rgba(65, 253, 175, 0.192);
+                    }
+
+
+                }
+
+
+
 
                 a {
+                    color: white;
+                    padding: 8px;
+                    border: 2px solid $wic-rosa;
+                    font-size: 18px;
+                    border-radius: 10px;
+                    //background-color: rgba(255, 99, 247, 0.212);
+                    width: auto;
+                    transition: transform 0.3s ease;
 
-                    font-size: 10px;
+                    @media screen and (max-width: 767px) {
 
+                        font-size: 13px;
+
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(105%);
+                    }
 
 
                 }
 
                 .contactBtn {
                     border: 2px solid $wic-azul-claro;
-                    font-size: 13px;
                     // background-color: rgba(65, 253, 175, 0.192);
                 }
-
-
             }
 
 
-
-
-            a {
-                color: white;
-                padding: 8px;
-                border: 2px solid $wic-rosa;
-                font-size: 18px;
-                border-radius: 10px;
-                //background-color: rgba(255, 99, 247, 0.212);
-                width: auto;
-                transition: transform 0.3s ease;
-
-                @media screen and (max-width: 767px) {
-
-                    font-size: 13px;
-
-                }
-
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(105%);
-                }
-
-
-            }
-
-            .contactBtn {
-                border: 2px solid $wic-azul-claro;
-                // background-color: rgba(65, 253, 175, 0.192);
-            }
         }
 
-
-    }
-
-    .social {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-
-        @media screen and (max-width: 767px) {
-
-            flex-direction: column-reverse;
-
-
-
-        }
-
-
-
-        .icons {
-            color: $wic-gris-claro ;
-            padding: 5px;
-            transform: scale(130%);
-            transition: color 0.2s ease;
-
-
-
-            &:hover {
-
-                color: $wic-azul;
-            }
-        }
-
-
-
-    }
-
-
-
-}
-
-.About {
-    margin-top: 40vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 4vw;
-    margin-left: 5vw;
-
-    @media screen and (max-width: 767px) {
-
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 10vw;
-        margin-left: 0vw;
-    }
-
-
-    @media screen and (min-width: 1280px) {
-        gap: 10vw;
-    }
-
-
-    img {
-        width: 250px;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.6);
-        filter: grayscale(100%);
-        transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
-
-        @media screen and (min-width: 1280px) {
-            width: 350px;
-        }
-
-        &:hover {
-            transform: scale(110%);
-            background-color: transparent;
-            filter: grayscale(0%);
-        }
-
-        @media screen and (max-width: 767px) {
-            transition: transform 2.5s ease, background-color 0.7s ease, filter 2.5s ease;
-
-            &.in-view {
-                filter: grayscale(0%);
-                transform: scale(110%);
-            }
-
-        }
-
-
-    }
-
-    p {
-        width: 50vw;
-        color: $wic-gris-claro;
-        font-size: 16px;
-        line-height: 25px;
-
-        @media screen and (max-width: 767px) {
-
-
-            width: 70vw;
-        }
-
-
-
-    }
-
-}
-
-.Passions {
-    margin-top: 25vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4vw;
-
-    @media screen and (min-width: 1280px) {
-        gap: 5vw;
-    }
-
-    @media screen and (max-width: 767px) {
-
-        margin-top: 20vh;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    //width: 100px;
-    .containerPass {
-        margin-right: 10vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        column-gap: 3vw;
-        row-gap: 3vh;
-
-
-
-        @media screen and (min-width: 1280px) {
-            margin-left: 3vw;
-            column-gap: 3vw;
-            row-gap: 5vh;
-
-        }
-
-        @media screen and (max-width: 767px) {
-
-            margin-top: 5vh;
-            margin-right: 2vw;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        div {
-            //border: 2px solid $wic-azul-claro;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-
-
-
-
-            .passIcons {
-                margin-top: 5vh;
-                color: $wic-rosa;
-                transform: scale(250%);
-                margin-bottom: 5vh;
-
-            }
-
-            .passIcons1 {
-                margin-top: 5vh;
-                color: $wic-azul-claro;
-                transform: scale(250%);
-                margin-bottom: 5vh;
-
-            }
-
-            h2 {
-                color: $wic-gris-claro;
-                font-size: 15px;
-                width: 12vw;
-                height: auto;
-                padding: 15px;
-
-                @media screen and (min-width: 1280px) {
-                    width: 12vw;
-                    font-size: 18px;
-                }
-
-                @media screen and (max-width: 767px) {
-                    width: 21vw;
-                    font-size: 16px;
-
-                }
-
-            }
-        }
-
-    }
-
-}
-
-.Skills {
-
-    margin-top: 25vh;
-    display: flex;
-    justify-content: left;
-    gap: 5vw;
-
-    @media screen and (max-width: 767px) {
-        margin-top: 20vh;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 10vw;
-
-
-    }
-
-    @media screen and (min-width: 1280px) {
-        gap: 10vw;
-    }
-
-
-
-    .container {
-        margin-left: 5vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 7vw;
-        row-gap: 3vh;
-
-        @media screen and (max-width: 767px) {
-
-            flex-direction: column-reverse;
-            margin-left: 1vw;
-            column-gap: 4vw;
-
-
-        }
-
-        @media screen and (min-width: 1280px) {
-            margin-left: 8vw;
-            column-gap: 8vw;
-            row-gap: 5vh;
-
-        }
-
-    }
-
-
-}
-
-.Portfolio {
-    margin-top: 25vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    gap: 3vw;
-
-    @media screen and (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20vh;
-        gap: 10vw;
-
-
-    }
-
-    @media screen and (min-width: 1280px) {
-
-        gap: 2vw;
-    }
-
-    .projMenu {
-        margin-bottom: 3vh;
-        display: flex;
-        //justify-content: center;
-        gap: 1vw;
-
-        @media screen and (max-width: 767px) {
-            justify-content: center;
-            gap: 5vw;
-        }
-
-
-        .projBtn {
-
-            color: $wic-gris-claro;
-
-            border: 2px solid $wic-rosa;
-            padding: 5px;
-            border-radius: 10px;
-
-            &:hover {
-                cursor: pointer;
-                background-color: rgba(24, 255, 147, 0.192);
-            }
-
-
-
-        }
-
-        .active {
-            background-color: rgba(74, 238, 183, 0.1);
-        }
-
-    }
-
-    .projects {
-        margin-right: 40px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        //para media queries desktop añadir 1 al grid 
-        column-gap: 6vw;
-        row-gap: 2vh;
-        //gap: 3vw;
-
-        @media screen and (min-width: 1280px) {
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 5vw;
-            margin-right: 20px;
-        }
-
-        @media screen and (max-width: 767px) {
-            grid-template-columns: 1fr;
-            row-gap: 3vh;
-            margin-right: 5px;
-        }
-
-
-
-    }
-}
-
-.Contact {
-    margin-top: 25vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    gap: 3vw;
-    margin-bottom: 25vh;
-
-    div {
-        margin-left: 20px;
-
-        p {
-            color: $wic-gris-claro;
-            margin-bottom: 5vh;
+        .social {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
 
             @media screen and (max-width: 767px) {
 
-                width: 50vw;
+                flex-direction: column-reverse;
 
+
+
+            }
+
+
+
+            .icons {
+                color: $wic-gris-claro ;
+                padding: 5px;
+                transform: scale(130%);
+                transition: color 0.2s ease;
+
+
+
+                &:hover {
+
+                    color: $wic-azul;
+                }
+            }
+
+
+
+        }
+
+
+
+    }
+
+    .About {
+        margin-top: 40vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4vw;
+        margin-left: 5vw;
+
+        @media screen and (max-width: 767px) {
+
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10vw;
+            margin-left: 0vw;
+        }
+
+
+        @media screen and (min-width: 1280px) {
+            gap: 10vw;
+        }
+
+
+        img {
+            width: 250px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            filter: grayscale(100%);
+            transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+
+            @media screen and (min-width: 1280px) {
+                width: 350px;
+            }
+
+            &:hover {
+                transform: scale(110%);
+                background-color: transparent;
+                filter: grayscale(0%);
+            }
+
+            @media screen and (max-width: 767px) {
+                transition: transform 2.5s ease, background-color 0.7s ease, filter 2.5s ease;
+
+                &.in-view {
+                    filter: grayscale(0%);
+                    transform: scale(110%);
+                }
+
+            }
+
+
+        }
+
+        p {
+            width: 50vw;
+            color: $wic-gris-claro;
+            font-size: 16px;
+            line-height: 25px;
+
+            @media screen and (max-width: 767px) {
+
+
+                width: 70vw;
+            }
+
+
+
+        }
+
+    }
+
+    .Passions {
+        margin-top: 25vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 4vw;
+
+        @media screen and (min-width: 1280px) {
+            gap: 5vw;
+        }
+
+        @media screen and (max-width: 767px) {
+
+            margin-top: 20vh;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        //width: 100px;
+        .containerPass {
+            margin-right: 10vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            column-gap: 3vw;
+            row-gap: 3vh;
+
+
+
+            @media screen and (min-width: 1280px) {
+                margin-left: 3vw;
+                column-gap: 3vw;
+                row-gap: 5vh;
+
+            }
+
+            @media screen and (max-width: 767px) {
+
+                margin-top: 5vh;
+                margin-right: 2vw;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            div {
+                //border: 2px solid $wic-azul-claro;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+
+
+
+
+                .passIcons {
+                    margin-top: 5vh;
+                    color: $wic-rosa;
+                    transform: scale(250%);
+                    margin-bottom: 5vh;
+
+                }
+
+                .passIcons1 {
+                    margin-top: 5vh;
+                    color: $wic-azul-claro;
+                    transform: scale(250%);
+                    margin-bottom: 5vh;
+
+                }
+
+                h2 {
+                    color: $wic-gris-claro;
+                    font-size: 15px;
+                    width: 12vw;
+                    height: auto;
+                    padding: 15px;
+
+                    @media screen and (min-width: 1280px) {
+                        width: 12vw;
+                        font-size: 18px;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        width: 21vw;
+                        font-size: 16px;
+
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+    .Skills {
+
+        margin-top: 25vh;
+        display: flex;
+        justify-content: left;
+        gap: 5vw;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 20vh;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10vw;
+
+
+        }
+
+        @media screen and (min-width: 1280px) {
+            gap: 10vw;
+        }
+
+
+
+        .container {
+            margin-left: 5vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 7vw;
+            row-gap: 3vh;
+
+            @media screen and (max-width: 767px) {
+
+                flex-direction: column-reverse;
+                margin-left: 1vw;
+                column-gap: 4vw;
+
+
+            }
+
+            @media screen and (min-width: 1280px) {
+                margin-left: 8vw;
+                column-gap: 8vw;
+                row-gap: 5vh;
 
             }
 
@@ -635,41 +548,153 @@ body {
 
     }
 
-    span {
-        color: white;
+    .Portfolio {
+        margin-top: 25vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 3vw;
+
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20vh;
+            gap: 10vw;
+
+
+        }
+
+        @media screen and (min-width: 1280px) {
+
+            gap: 2vw;
+        }
+
+        .projMenu {
+            margin-bottom: 3vh;
+            display: flex;
+            //justify-content: center;
+            gap: 1vw;
+
+            @media screen and (max-width: 767px) {
+                justify-content: center;
+                gap: 5vw;
+            }
+
+
+            .projBtn {
+
+                color: $wic-gris-claro;
+
+                border: 2px solid $wic-rosa;
+                padding: 5px;
+                border-radius: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(24, 255, 147, 0.192);
+                }
+
+
+
+            }
+
+            .active {
+                background-color: rgba(74, 238, 183, 0.1);
+            }
+
+        }
+
+        .projects {
+            margin-right: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            //para media queries desktop añadir 1 al grid 
+            column-gap: 6vw;
+            row-gap: 2vh;
+            //gap: 3vw;
+
+            @media screen and (min-width: 1280px) {
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 5vw;
+                margin-right: 20px;
+            }
+
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                row-gap: 3vh;
+                margin-right: 5px;
+            }
+
+
+
+        }
     }
 
-    @media screen and (max-width: 767px) {
+    .Contact {
+        margin-top: 25vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 3vw;
+        margin-bottom: 25vh;
 
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        div {
+            margin-left: 20px;
+
+            p {
+                color: $wic-gris-claro;
+                margin-bottom: 5vh;
+
+                @media screen and (max-width: 767px) {
+
+                    width: 50vw;
 
 
+                }
 
-    }
+            }
 
-    .contactBtn {
-        border: 2px solid $wic-azul-claro;
-        background-color: rgba(0, 0, 0, 0.075);
-        color: white;
-        padding: 5px;
-        border-radius: 10px;
 
+        }
+
+        span {
+            color: white;
+        }
 
         @media screen and (max-width: 767px) {
 
+            flex-direction: column-reverse;
+            justify-content: center;
             align-items: center;
-
+            text-align: center;
 
 
 
         }
 
+        .contactBtn {
+            border: 2px solid $wic-azul-claro;
+            background-color: rgba(0, 0, 0, 0.075);
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+
+
+            @media screen and (max-width: 767px) {
+
+                align-items: center;
 
 
 
 
+            }
+
+
+
+
+
+        }
     }
 }
