@@ -1,46 +1,57 @@
 [
     {
         "name": "React JS",
-        "percentage": 70
+        "percentage": 70,
+        "imageIcon": "faReact"
     },
     {
         "name": "Express JS",
-        "percentage": 70
+        "percentage": 70,
+        "imageIcon": "faServer"
     },
     {
         "name": "Node JS",
-        "percentage": 70
+        "percentage": 70,
+        "imageIcon": "faNodeJs"
     },
     {
         "name": "MySQL",
-        "percentage": 75
+        "percentage": 60,
+        "imageIcon": "faDatabase"
     },
     {
         "name": "MongoDB",
-        "percentage": 55
+        "percentage": 55,
+        "imageIcon": "faDatabase"
     },
     {
         "name": "JavaScript",
-        "percentage": 75
+        "percentage": 75,
+        "imageIcon": "faJs"
     },
     {
         "name": "C#",
-        "percentage": 65
+        "percentage": 65,
+        "imageIcon": "faMicrosoft"
     },
     {
         "name": "Python",
-        "percentage": 50
+        "percentage": 50,
+        "imageIcon": "faPython"
     },
     {
         "name": "Java",
-        "percentage": 60
+        "percentage": 60,
+        "imageIcon": "faJava"
     },
     {
         "name": "Unity",
-        "percentage": 80
+        "percentage": 80,
+        "imageIcon": "faUnity"
     },
     {
         "name": "GitHub",
-        "percentage": 80
+        "percentage": 80,
+        "imageIcon": "faGithubAlt"
     }
 ]

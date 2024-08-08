@@ -502,7 +502,7 @@ body {
 
         margin-top: 25vh;
         display: flex;
-        justify-content: left;
+        justify-content: right;
         gap: 5vw;
 
         @media screen and (max-width: 767px) {
@@ -515,21 +515,22 @@ body {
         }
 
         @media screen and (min-width: 1280px) {
-            gap: 10vw;
+            gap: 5vw;
         }
 
 
 
         .container {
-            margin-left: 5vw;
+            margin-left: 3vw;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             column-gap: 7vw;
             row-gap: 3vh;
 
             @media screen and (max-width: 767px) {
 
                 flex-direction: column-reverse;
+                grid-template-columns: 1fr 1fr;
                 margin-left: 1vw;
                 column-gap: 4vw;
 
@@ -538,7 +539,7 @@ body {
 
             @media screen and (min-width: 1280px) {
                 margin-left: 8vw;
-                column-gap: 8vw;
+                column-gap: 5vw;
                 row-gap: 5vh;
 
             }

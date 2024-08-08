@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubAlt, faLinkedinIn, faItchIo } from '@fortawesome/free-brands-svg-icons';
-import { faCube, faMusic, faPalette, faBook, faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faGithubAlt, faLinkedinIn, faItchIo, } from '@fortawesome/free-brands-svg-icons';
+import { faCube, faMusic, faPalette, faBook, faGamepad, } from '@fortawesome/free-solid-svg-icons';
 
 
 import Header from "./Header";
@@ -17,7 +17,6 @@ import "../scss/App.scss";
 import skills from '../data/skills.json';
 import projects from '../data/webProjects.json';
 import ImageComponent from './ImageComponent';
-
 
 
 
@@ -95,12 +94,14 @@ function App() {
         </section>
         <section className="Skills" id="skills">
           <div className="container">
-            {skills.map((skill, index) => (
+            {skills.map((skill, index,) => (
               <Skill
                 key={index}
                 name={skill.name}
                 percentage={skill.percentage}
+                icons={skill.imageIcon}
               />
+
             ))}
           </div>
           <span className="label">SKILLS</span>
@@ -151,6 +152,7 @@ function App() {
 
     </>
   )
+
 
 }
 
