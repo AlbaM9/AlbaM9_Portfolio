@@ -503,19 +503,19 @@ body {
         margin-top: 25vh;
         display: flex;
         justify-content: right;
-        gap: 5vw;
+        gap: 1vw;
 
         @media screen and (max-width: 767px) {
             margin-top: 20vh;
             flex-direction: column-reverse;
             align-items: center;
-            gap: 10vw;
+            gap: 5vw;
 
 
         }
 
         @media screen and (min-width: 1280px) {
-            gap: 5vw;
+            gap: 0.2vw;
         }
 
 
@@ -524,7 +524,7 @@ body {
             margin-left: 3vw;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 7vw;
+            column-gap: 1vw;
             row-gap: 3vh;
 
             @media screen and (max-width: 767px) {
@@ -532,7 +532,7 @@ body {
                 flex-direction: column-reverse;
                 grid-template-columns: 1fr 1fr;
                 margin-left: 1vw;
-                column-gap: 4vw;
+                column-gap: 5vw;
 
 
             }
@@ -540,7 +540,7 @@ body {
             @media screen and (min-width: 1280px) {
                 margin-left: 8vw;
                 column-gap: 5vw;
-                row-gap: 5vh;
+                row-gap: 2vh;
 
             }
 
