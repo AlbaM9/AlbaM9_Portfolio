@@ -1,11 +1,11 @@
 [
     {
-        "name": "Proyectos Paintones",
-        "description": "Group Full Stack project that allows you add and display project cards with static detail views. ",
-        "github": "https://github.com/BiancaMesa/promo-w-module-4-team-2",
-        "link": "https://proyectos-paintones.onrender.com",
-        "techs": "React JS | Express JS | MySQL",
-        "image": "./images/logo-landing-Bg7Hes1v.jpg",
+        "name": "AlbaM9Art Portfolio",
+        "description": "My own artist portfolio. Full Stack project developed in Next JS with TypeScript",
+        "github": "https://github.com/AlbaM9/AlbaM9_Artist_Portfolio",
+        "link": "https://albam9art-81faxhgtq-albam9s-projects.vercel.app",
+        "techs": "Next JS | TypeScript | Tailwind CSS",
+        "image": "./images/bg-portfolio.png",
         "category": "web"
     },
     {
@@ -61,5 +61,14 @@
         "techs": "Unity | C# ",
         "image": "https://img.itch.zone/aW1nLzg0MTk3MzYucG5n/315x250%23c/gtKYKl.png",
         "category": "videogame"
+    },
+    {
+        "name": "Proyectos Paintones",
+        "description": "Group Full Stack project that allows you add and display project cards with static detail views. ",
+        "github": "https://github.com/BiancaMesa/promo-w-module-4-team-2",
+        "link": " ",
+        "techs": "React JS | Express JS | MySQL",
+        "image": "./images/logo-landing-Bg7Hes1v.jpg",
+        "category": "web"
     }
 ]

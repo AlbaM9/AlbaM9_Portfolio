@@ -53,5 +53,20 @@
         "name": "GitHub",
         "percentage": 80,
         "imageIcon": "faGithubAlt"
+    },
+    {
+        "name": "Next JS",
+        "percentage": 80,
+        "imageIcon": ""
+    },
+    {
+        "name": "Tailwind CSS",
+        "percentage": 80,
+        "imageIcon": ""
+    },
+    {
+        "name": "TypeScript",
+        "percentage": 80,
+        "imageIcon": "faTs"
     }
 ]
