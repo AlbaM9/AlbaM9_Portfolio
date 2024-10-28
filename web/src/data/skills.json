@@ -57,16 +57,16 @@
     {
         "name": "Next JS",
         "percentage": 80,
-        "imageIcon": ""
+        "imageIcon": "./images/nextIcon.png"
     },
     {
         "name": "Tailwind CSS",
         "percentage": 80,
-        "imageIcon": ""
+        "imageIcon": "./images/tailwind.png"
     },
     {
         "name": "TypeScript",
         "percentage": 80,
-        "imageIcon": "faTs"
+        "imageIcon": "./images/tsIcon.png"
     }
 ]

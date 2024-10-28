@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import "../scss/components/Skill.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs, faJs, faMicrosoft, faPython, faJava, faUnity, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faServer, } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 
 function Skill({ name, icons }) {
-
+    // Mapeo de los íconos de FontAwesome
     const iconMap = {
         faReact,
         faNodeJs,
@@ -17,23 +17,25 @@ function Skill({ name, icons }) {
         faJava,
         faUnity,
         faGithubAlt,
-
     };
 
-    const icon = iconMap[icons];
+    // Verifica si el ícono es de FontAwesome o una imagen
+    const isFontAwesomeIcon = iconMap.hasOwnProperty(icons);
+
     return (
         <div className='skillStyle'>
             <div className='iconBrand'>
-                <FontAwesomeIcon icon={icon} />
+                {isFontAwesomeIcon ? (
+                    <FontAwesomeIcon icon={iconMap[icons]} className="fa-icon" />
+                ) : (
+                    <img src={icons} alt={name} className="customIcon" />
+                )}
             </div>
             <div className='nameBar'>
                 <span>{name}</span>
-                <div
-                ></div>
             </div>
-
         </div>
-    )
+    );
 }
 
-export default Skill
+export default Skill;
