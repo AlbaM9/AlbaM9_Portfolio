@@ -3,7 +3,7 @@
         "name": "AlbaM9Art Portfolio",
         "description": "My own artist portfolio. Full Stack project developed in Next JS with TypeScript",
         "github": "https://github.com/AlbaM9/AlbaM9_Artist_Portfolio",
-        "link": "https://albam9art-81faxhgtq-albam9s-projects.vercel.app",
+        "link": "https://albam9art-albam9s-projects.vercel.app",
         "techs": "Next JS | TypeScript | Tailwind CSS",
         "image": "./images/bg-portfolio.png",
         "category": "web"
