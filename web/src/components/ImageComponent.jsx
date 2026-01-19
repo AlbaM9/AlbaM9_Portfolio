@@ -27,10 +27,15 @@ const ImageComponent = ({ src, alt }) => {
         };
     }, []);
 
+    // Asegurar que las rutas de imágenes usen el base URL correcto
+    const imageSrc = src.startsWith('/') 
+        ? `${import.meta.env.BASE_URL}${src.slice(1)}` 
+        : src;
+
     return (
         <img
             ref={imageRef}
-            src={src}
+            src={imageSrc}
             alt={alt}
             className={`img ${isInView ? 'in-view' : ''}`}
         />

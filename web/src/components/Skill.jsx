@@ -24,6 +24,11 @@ function Skill({ name, icons }) {
 
     // Verifica si el ícono es de FontAwesome o una imagen
     const isFontAwesomeIcon = iconMap.hasOwnProperty(icons);
+    
+    // Asegurar que las rutas de imágenes usen el base URL correcto
+    const imageSrc = !isFontAwesomeIcon && icons && icons.startsWith('/')
+        ? `${import.meta.env.BASE_URL}${icons.slice(1)}`
+        : icons;
 
     return (
         <div className='skillStyle'>
@@ -31,7 +36,7 @@ function Skill({ name, icons }) {
                 {isFontAwesomeIcon ? (
                     <FontAwesomeIcon icon={iconMap[icons]} className="fa-icon" />
                 ) : (
-                    <img src={icons} alt={name} className="customIcon" />
+                    <img src={imageSrc} alt={name} className="customIcon" />
                 )}
             </div>
             <div className='nameBar'>

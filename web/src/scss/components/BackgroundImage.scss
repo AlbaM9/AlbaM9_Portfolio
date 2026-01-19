@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('/images/galaxia_apaisado.png');
+    background-image: var(--desktop-bg, url('/images/galaxia_apaisado.png'));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,7 @@
     pointer-events: none;
 
     @media screen and (max-width: 767px) {
-        background-image: url('/images/galaxia.png');
+        background-image: var(--mobile-bg, url('/images/galaxia.png'));
     }
 }
 
