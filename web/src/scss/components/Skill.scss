@@ -5,12 +5,32 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     border-radius: 10px;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+        padding: 8px;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 150px;
+    }
 
     .nameBar {
         color: $wic-gris-claro;
         padding: 10px;
-        width: 20vw;
+        width: 100%;
+        min-width: 0;
+        word-wrap: break-word;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+            padding: 8px;
+        }
 
         &:hover {
             color: $wic-azul-claro;
@@ -19,12 +39,27 @@
 
     .iconBrand {
         color: $wic-rosa;
-        font-size: 40px; // Tamaño de los íconos de FontAwesome
+        font-size: 40px;
         padding-right: 5px;
         transition: transform 0.6s ease, color 0.6s ease;
         width: 50px;
+        min-width: 50px;
         display: flex;
         align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            font-size: 35px;
+            width: 45px;
+            min-width: 45px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 30px;
+            width: 40px;
+            min-width: 40px;
+            padding-right: 8px;
+        }
 
         // Efecto hover para los íconos
         &:hover {
@@ -35,14 +70,17 @@
         .fa-icon,
         .customIcon {
             width: 40px;
-            color: $wic-rosa;
             height: 40px;
-            color: inherit; // Aplica el color de la clase contenedora
-            object-fit: contain; // Para ajustar la imagen dentro del contenedor
+            color: inherit;
+            object-fit: contain;
+
+            @media screen and (max-width: 767px) {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         .customIcon {
-            // Aplicar el filtro rosa
             filter: sepia(1) saturate(600%) hue-rotate(290deg) brightness(0.9);
         }
     }

@@ -1,72 +1,122 @@
 [
     {
-        "name": "React JS",
-        "percentage": 70,
-        "imageIcon": "faReact"
-    },
-    {
-        "name": "Express JS",
-        "percentage": 70,
-        "imageIcon": "faServer"
-    },
-    {
-        "name": "Node JS",
-        "percentage": 70,
-        "imageIcon": "faNodeJs"
-    },
-    {
-        "name": "MySQL",
-        "percentage": 60,
-        "imageIcon": "faDatabase"
-    },
-    {
-        "name": "MongoDB",
-        "percentage": 55,
-        "imageIcon": "faDatabase"
-    },
-    {
         "name": "JavaScript",
         "percentage": 75,
-        "imageIcon": "faJs"
-    },
-    {
-        "name": "C#",
-        "percentage": 65,
-        "imageIcon": "faMicrosoft"
-    },
-    {
-        "name": "Python",
-        "percentage": 50,
-        "imageIcon": "faPython"
-    },
-    {
-        "name": "Java",
-        "percentage": 60,
-        "imageIcon": "faJava"
-    },
-    {
-        "name": "Unity",
-        "percentage": 80,
-        "imageIcon": "faUnity"
-    },
-    {
-        "name": "GitHub",
-        "percentage": 80,
-        "imageIcon": "faGithubAlt"
-    },
-    {
-        "name": "Next JS",
-        "percentage": 80,
-        "imageIcon": "./images/nextIcon.png"
-    },
-    {
-        "name": "Tailwind CSS",
-        "percentage": 80,
-        "imageIcon": "./images/tailwind.png"
+        "imageIcon": "faJs",
+        "category": "Lenguajes"
     },
     {
         "name": "TypeScript",
         "percentage": 80,
-        "imageIcon": "./images/tsIcon.png"
+        "imageIcon": "/images/tsIcon.png",
+        "category": "Lenguajes"
+    },
+    {
+        "name": "Python",
+        "percentage": 50,
+        "imageIcon": "faPython",
+        "category": "Lenguajes"
+    },
+    {
+        "name": "Java",
+        "percentage": 60,
+        "imageIcon": "faJava",
+        "category": "Lenguajes"
+    },
+    {
+        "name": "C#",
+        "percentage": 65,
+        "imageIcon": "faMicrosoft",
+        "category": "Lenguajes"
+    },
+    {
+        "name": "React JS",
+        "percentage": 70,
+        "imageIcon": "faReact",
+        "category": "Frontend"
+    },
+    {
+        "name": "Vue 3",
+        "percentage": 70,
+        "imageIcon": "faVuejs",
+        "category": "Frontend"
+    },
+    {
+        "name": "Next JS",
+        "percentage": 80,
+        "imageIcon": "/images/nextIcon.png",
+        "category": "Frontend"
+    },
+    {
+        "name": "Tailwind CSS",
+        "percentage": 80,
+        "imageIcon": "/images/tailwind.png",
+        "category": "Frontend"
+    },
+    {
+        "name": "Node JS",
+        "percentage": 70,
+        "imageIcon": "faNodeJs",
+        "category": "Backend"
+    },
+    {
+        "name": "Express JS",
+        "percentage": 70,
+        "imageIcon": "faServer",
+        "category": "Backend"
+    },
+    {
+        "name": ".NET Core 6.0",
+        "percentage": 65,
+        "imageIcon": "faMicrosoft",
+        "category": "Backend"
+    },
+    {
+        "name": "Spring Boot",
+        "percentage": 60,
+        "imageIcon": "faJava",
+        "category": "Backend"
+    },
+    {
+        "name": "MySQL/PostgreSQL",
+        "percentage": 60,
+        "imageIcon": "faDatabase",
+        "category": "Databases"
+    },
+    {
+        "name": "MongoDB/DynamoDB",
+        "percentage": 55,
+        "imageIcon": "faDatabase",
+        "category": "Databases"
+    },
+    {
+        "name": "AWS",
+        "percentage": 60,
+        "imageIcon": "faAws",
+        "category": "Cloud/DevOps"
+    },
+    {
+        "name": "GitHub",
+        "percentage": 80,
+        "imageIcon": "faGithubAlt",
+        "category": "Cloud/DevOps"
+    },
+    {
+        "name": "Docker",
+        "percentage": 65,
+        "imageIcon": "faDocker",
+        "category": "Cloud/DevOps"
+    },
+    {
+        "name": "Postman",
+        "percentage": 75,
+        "imageIcon": "/images/postman.png",
+        "category": "Cloud/DevOps"
+    },
+    {
+        "name": "Unity",
+        "percentage": 80,
+        "imageIcon": "faUnity",
+        "category": "Game Development"
     }
 ]

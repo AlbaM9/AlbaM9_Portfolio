@@ -12,6 +12,7 @@ import { faCube, faMusic, faPalette, faBook, faGamepad, } from '@fortawesome/fre
 import Header from "./Header";
 import Project from "./Project";
 import Skill from "./Skill";
+import BackgroundImage from "./BackgroundImage";
 import "../scss/App.scss";
 
 import skills from '../data/skills.json';
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <>
-
+      <BackgroundImage />
       <Header />
       <>
         <section className="Introduction">
@@ -61,7 +62,7 @@ function App() {
         <section className="About" id="about">
           <p>
             I am a passionate web developer with experience in technologies like React and Node.js. I am currently seeking new opportunities that allow me to continue learning and growing in this ever-evolving sector. I am committed to contributing my energy and creativity to challenging projects while continuing to expand my technical skills and adapting to an environment that fosters innovation and excellence.</p>
-          <ImageComponent src="./images/IMG_20200822_212243.jpg" alt="Description 1" />
+          <ImageComponent src="/images/IMG_20200822_212243.jpg" alt="Description 1" />
 
           <span className="label">ABOUT</span>
 
@@ -94,14 +95,29 @@ function App() {
         </section>
         <section className="Skills" id="skills">
           <div className="container">
-            {skills.map((skill, index,) => (
-              <Skill
-                key={index}
-                name={skill.name}
-                percentage={skill.percentage}
-                icons={skill.imageIcon}
-              />
-
+            {Object.entries(
+              skills.reduce((acc, skill) => {
+                const category = skill.category || 'Otros';
+                if (!acc[category]) {
+                  acc[category] = [];
+                }
+                acc[category].push(skill);
+                return acc;
+              }, {})
+            ).map(([category, categorySkills]) => (
+              <div key={category} className="skillCategory">
+                <h3 className="categoryTitle">{category}</h3>
+                <div className="categorySkills">
+                  {categorySkills.map((skill, index) => (
+                    <Skill
+                      key={index}
+                      name={skill.name}
+                      percentage={skill.percentage}
+                      icons={skill.imageIcon}
+                    />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
           <span className="label">SKILLS</span>

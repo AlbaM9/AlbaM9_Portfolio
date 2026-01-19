@@ -1,0 +1,31 @@
+.background-galaxy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/galaxia_apaisado.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none;
+
+    @media screen and (max-width: 767px) {
+        background-image: url('/images/galaxia.png');
+    }
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 17, 31, 0.4);
+    mix-blend-mode: multiply;
+
+    @media screen and (max-width: 767px) {
+        background-color: rgba(3, 17, 31, 0.7);
+    }
+}

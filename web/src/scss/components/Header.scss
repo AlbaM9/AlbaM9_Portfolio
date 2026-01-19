@@ -6,23 +6,19 @@
     gap: 23vw;
     padding: 20px;
     align-items: center;
-    min-width: 410px;
     position: fixed;
-    /* Corrección del error tipográfico */
     width: 100%;
-    /* Asegura que el header ocupe todo el ancho de la pantalla */
+    max-width: 100vw;
     top: 0;
-    /* Posiciona el header en la parte superior de la pantalla */
     left: 0;
-    /* Alinea el header a la izquierda */
     background-color: rgba(255, 255, 255, 0.05);
-    /* Fondo blanco con 80% de opacidad */
-    /* Color de fondo para el header */
     z-index: 1000;
-    /* Asegura que el header esté encima de otros elementos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Añade una sombra para un efecto visual */
 
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        gap: 25vw;
+        padding: 15px 20px;
+    }
 
     @media screen and (min-width: 1280px) {
         gap: 35vw;
@@ -30,6 +26,8 @@
 
     @media screen and (max-width: 767px) {
         justify-content: space-between;
+        padding: 15px 20px;
+        gap: 0;
     }
 
     .logo {
@@ -38,6 +36,11 @@
         padding: 10px;
         background-color: $wic-rosa;
         border-radius: 30px;
+
+        @media screen and (max-width: 767px) {
+            transform: scale(120%);
+            padding: 8px;
+        }
     }
 
     .hamburger {
@@ -85,10 +88,18 @@
     list-style: none;
     gap: 5vw;
 
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        gap: 3vw;
+    }
+
     li {
         color: white;
         font-size: 18px;
         transition: color 0.3s ease;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            font-size: 16px;
+        }
 
         &:hover {
             color: $wic-azul;
@@ -97,15 +108,21 @@
 
         .btn {
             color: white;
-            padding: 8px;
+            padding: 8px 16px;
             border: 2px solid $wic-rosa;
             font-size: 18px;
             border-radius: 10px;
             transition: color 0.3s ease;
+            white-space: nowrap;
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                font-size: 16px;
+                padding: 6px 12px;
+            }
 
             @media screen and (max-width: 767px) {
                 font-size: 15px;
-                padding: 3px;
+                padding: 8px 16px;
             }
 
             &:hover {
@@ -121,26 +138,22 @@
         width: 100%;
         background-color: rgba(255, 255, 255, 0.1);
         position: absolute;
-        top: 100px;
+        top: 70px;
         left: 0;
         z-index: 1;
         display: none;
-
+        backdrop-filter: blur(10px);
 
         &.active {
             display: flex;
             gap: 15px;
-
         }
 
         li {
-            margin-left: 50px;
+            margin-left: 30px;
             text-align: left;
-
-            width: 100%;
+            width: calc(100% - 60px);
             font-size: 15px;
         }
-
-
     }
 }

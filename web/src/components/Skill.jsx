@@ -1,7 +1,7 @@
 import React from 'react';
 import "../scss/components/Skill.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faNodeJs, faJs, faMicrosoft, faPython, faJava, faUnity, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faNodeJs, faJs, faMicrosoft, faPython, faJava, faUnity, faGithubAlt, faVuejs, faAws, faDocker } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 
 function Skill({ name, icons }) {
@@ -17,6 +17,9 @@ function Skill({ name, icons }) {
         faJava,
         faUnity,
         faGithubAlt,
+        faVuejs,
+        faAws,
+        faDocker,
     };
 
     // Verifica si el ícono es de FontAwesome o una imagen

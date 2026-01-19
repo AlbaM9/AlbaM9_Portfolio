@@ -13,44 +13,36 @@
     //font-family: 'Montserrat', sans-serif;
     //font-family: 'Poppins', sans-serif;
     //a 760px se ve perfecto. Hacer mobile first y desktop
+}
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    background-color: #03111f;
 }
 
 body {
+    overflow-x: hidden; // Prevenir overflow horizontal
+    position: relative;
+    min-height: 100vh;
+    background-color: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 100vw;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-        background-image: url('/public/images/galaxia_apaisado.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100vw;
-        opacity: 0.6;
-        z-index: -1;
-
-        @media screen and (max-width: 767px) {
-            opacity: 0.3;
-            background-image: url('/public/images/galaxia.png');
-        }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
-
-    background-color: $azul-oscuro;
-    margin-left: 20px;
-    margin-right: 20px;
-    min-width: 410px;
-
-
-
     @media screen and (min-width: 1280px) {
-        margin-left: 40px;
-        margin-right: 40px;
-
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     /* @media screen and (max-width: 860px) {
@@ -61,55 +53,92 @@ body {
 
     .label {
         color: $wic-gris-claro;
-        transform: rotate(270deg);
         background-color: rgba(255, 255, 255, 0.1);
-        margin-top: 30px;
-        padding: 5px;
-        height: 30px;
+        padding: 5px 10px;
+        height: auto;
+        min-height: 30px;
         width: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(270deg);
+        transform-origin: center center;
 
+        // Labels a la izquierda por defecto (About, Skills, Contact)
+        left: -65px;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            width: 120px;
+            font-size: 14px;
+            left: -60px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            left: -65px;
+        }
 
         @media screen and (max-width: 767px) {
-
-            transform: rotate(0deg);
+            position: relative;
+            transform: none;
+            transform-origin: center center;
             width: auto;
+            min-width: 100px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 0;
+            left: auto;
+            right: auto;
+            top: auto;
+            padding: 8px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
 
             &::before {
-
                 content: '';
                 position: absolute;
-                width: 100%;
-                /* Ajusta el ancho según tus necesidades */
+                width: 40%;
+                min-width: 50px;
                 height: 2px;
                 background-color: $wic-azul-claro;
-                /* Color rosa */
                 top: 50%;
-                left: 50%;
-                transform: translateX(50%);
-                /* Centra la línea horizontal y verticalmente */
-                z-index: -1;
-
+                left: -45%;
+                transform: translateY(-50%);
+                z-index: 0;
             }
 
             &::after {
-
                 content: '';
                 position: absolute;
-                width: 100%;
-                /* Ajusta el ancho según tus necesidades */
+                width: 40%;
+                min-width: 50px;
                 height: 2px;
                 background-color: $wic-azul-claro;
-                /* Color rosa */
                 top: 50%;
-                left: 50%;
-                transform: translateX(-150%);
-                /* Centra la línea horizontal y verticalmente */
-                z-index: -1;
-
+                right: -45%;
+                transform: translateY(-50%);
+                z-index: 0;
             }
+        }
+    }
 
+    // Labels a la derecha (Passions, Portfolio) - alternando
+    .Passions .label,
+    .Portfolio .label {
+        left: auto;
+        right: -65px;
 
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            right: -60px;
+        }
 
+        @media screen and (min-width: 1280px) {
+            right: -65px;
+        }
+
+        @media screen and (max-width: 767px) {
+            right: auto;
         }
     }
 
@@ -118,26 +147,30 @@ body {
     }
 
     .Introduction {
-
-
-
         margin-top: 30vh;
         display: flex;
         flex-direction: row;
         justify-content: start;
         gap: 3vw;
+        width: 100%;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            gap: 4vw;
+            margin-top: 25vh;
+            margin-left: 5vw;
+        }
 
         @media screen and (min-width: 1280px) {
-            gap: 7vw;
+            gap: 2.5vw;
         }
 
         @media screen and (max-width: 767px) {
-            margin-top: 23vh;
+            margin-top: 20vh;
             flex-direction: column-reverse;
-
-            //align-items: center;
+            align-items: center;
             text-align: center;
-            max-width: 100vw;
+            gap: 5vh;
+            padding: 0 10px;
         }
 
 
@@ -151,15 +184,18 @@ body {
             h1 {
                 color: $wic-azul;
                 font-size: 55px;
+                word-wrap: break-word;
+
+                @media screen and (min-width: 768px) and (max-width: 1279px) {
+                    font-size: 50px;
+                }
 
                 @media screen and (min-width: 1280px) {
                     font-size: 60px;
                 }
 
                 @media screen and (max-width: 767px) {
-                    font-size: 40px;
-                    font-size: 35px;
-
+                    font-size: 32px;
                 }
             }
 
@@ -167,8 +203,12 @@ body {
                 color: $wic-azul-claro ;
                 font-size: 30px;
 
+                @media screen and (min-width: 768px) and (max-width: 1279px) {
+                    font-size: 26px;
+                }
+
                 @media screen and (max-width: 767px) {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
 
             }
@@ -176,6 +216,10 @@ body {
             h3 {
                 color: $wic-rosa;
                 font-size: 20px;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 16px;
+                }
             }
 
             .xtra {
@@ -264,18 +308,28 @@ body {
 
                 a {
                     color: white;
-                    padding: 8px;
+                    padding: 10px 20px;
                     border: 2px solid $wic-rosa;
                     font-size: 18px;
                     border-radius: 10px;
-                    //background-color: rgba(255, 99, 247, 0.212);
                     width: auto;
+                    min-width: 120px;
+                    text-align: center;
                     transition: transform 0.3s ease;
+                    white-space: nowrap;
+
+                    @media screen and (min-width: 768px) and (max-width: 1279px) {
+                        font-size: 16px;
+                        padding: 8px 16px;
+                        min-width: 110px;
+                    }
 
                     @media screen and (max-width: 767px) {
-
-                        font-size: 13px;
-
+                        font-size: 14px;
+                        padding: 8px 16px;
+                        min-width: 140px;
+                        width: 100%;
+                        max-width: 200px;
                     }
 
                     &:hover {
@@ -342,27 +396,41 @@ body {
         align-items: center;
         gap: 4vw;
         margin-left: 5vw;
+        width: 100%;
+        position: relative;
 
-        @media screen and (max-width: 767px) {
-
-            flex-direction: column-reverse;
-            align-items: center;
-            gap: 10vw;
-            margin-left: 0vw;
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            gap: 6vw;
+            margin-left: 3vw;
+            margin-right: 5vw;
         }
 
-
         @media screen and (min-width: 1280px) {
-            gap: 10vw;
+            gap: 4vw;
+            margin-left: 2vw;
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 8vh;
+            margin-left: 0;
+            margin-top: 30vh;
+            padding: 0 10px;
         }
 
 
         img {
             width: 250px;
+            max-width: 100%;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.6);
             filter: grayscale(100%);
             transition: transform 0.5s ease, background-color 0.5s ease, filter 0.5s ease;
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                width: 280px;
+            }
 
             @media screen and (min-width: 1280px) {
                 width: 350px;
@@ -375,6 +443,7 @@ body {
             }
 
             @media screen and (max-width: 767px) {
+                width: 200px;
                 transition: transform 2.5s ease, background-color 0.7s ease, filter 2.5s ease;
 
                 &.in-view {
@@ -389,14 +458,21 @@ body {
 
         p {
             width: 50vw;
+            max-width: 600px;
             color: $wic-gris-claro;
             font-size: 16px;
-            line-height: 25px;
+            line-height: 1.6;
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                width: 45vw;
+                font-size: 15px;
+            }
 
             @media screen and (max-width: 767px) {
-
-
-                width: 70vw;
+                width: 90%;
+                max-width: 100%;
+                font-size: 14px;
+                line-height: 1.5;
             }
 
 
@@ -411,41 +487,55 @@ body {
         flex-direction: row;
         justify-content: center;
         gap: 4vw;
+        width: 100%;
+        position: relative;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            gap: 3vw;
+            margin-top: 22vh;
+        }
 
         @media screen and (min-width: 1280px) {
-            gap: 5vw;
+            gap: 2vw;
         }
 
         @media screen and (max-width: 767px) {
-
             margin-top: 20vh;
             flex-direction: column;
             align-items: center;
-
+            padding: 0 10px;
         }
 
-        //width: 100px;
         .containerPass {
             margin-right: 10vw;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             column-gap: 3vw;
             row-gap: 3vh;
+            width: 100%;
+            max-width: 100%;
 
-
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                margin-right: 5vw;
+                margin-left: 5vw;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 2vw;
+                row-gap: 4vh;
+            }
 
             @media screen and (min-width: 1280px) {
-                margin-left: 3vw;
-                column-gap: 3vw;
-                row-gap: 5vh;
-
+                margin-left: 1vw;
+                column-gap: 1.5vw;
+                row-gap: 2vh;
             }
 
             @media screen and (max-width: 767px) {
-
                 margin-top: 5vh;
-                margin-right: 2vw;
+                margin-right: 0;
+                margin-left: 0;
                 grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 4vw;
+                row-gap: 4vh;
             }
 
             div {
@@ -479,6 +569,14 @@ body {
                     width: 12vw;
                     height: auto;
                     padding: 15px;
+                    word-wrap: break-word;
+
+                    @media screen and (min-width: 768px) and (max-width: 1279px) {
+                        width: auto;
+                        min-width: 100px;
+                        font-size: 14px;
+                        padding: 12px;
+                    }
 
                     @media screen and (min-width: 1280px) {
                         width: 12vw;
@@ -486,9 +584,10 @@ body {
                     }
 
                     @media screen and (max-width: 767px) {
-                        width: 21vw;
-                        font-size: 16px;
-
+                        width: auto;
+                        min-width: 80px;
+                        font-size: 12px;
+                        padding: 10px;
                     }
 
                 }
@@ -499,51 +598,115 @@ body {
     }
 
     .Skills {
-
         margin-top: 25vh;
         display: flex;
         justify-content: right;
         gap: 1vw;
+        width: 100%;
+        position: relative;
 
-        @media screen and (max-width: 767px) {
-            margin-top: 20vh;
-            flex-direction: column-reverse;
-            align-items: center;
-            gap: 5vw;
-
-
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            justify-content: center;
+            gap: 2vw;
+            margin-top: 22vh;
         }
 
         @media screen and (min-width: 1280px) {
             gap: 0.2vw;
         }
 
-
+        @media screen and (max-width: 767px) {
+            margin-top: 20vh;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 5vw;
+            padding: 0 10px;
+        }
 
         .container {
             margin-left: 3vw;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 1vw;
-            row-gap: 3vh;
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+            width: 100%;
 
-            @media screen and (max-width: 767px) {
-
-                flex-direction: column-reverse;
-                grid-template-columns: 1fr 1fr;
-                margin-left: 1vw;
-                column-gap: 5vw;
-
-
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                margin-left: 3vw;
+                max-width: 90%;
+                gap: 3vh;
             }
 
             @media screen and (min-width: 1280px) {
-                margin-left: 8vw;
-                column-gap: 5vw;
-                row-gap: 2vh;
-
+                margin-left: 6vw;
+                gap: 3vh;
             }
 
+            @media screen and (max-width: 767px) {
+                margin-left: 0;
+                gap: 3vh;
+                align-items: center;
+                width: 100%;
+            }
+
+            .skillCategory {
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                width: 100%;
+
+                @media screen and (max-width: 767px) {
+                    align-items: center;
+                    width: 100%;
+                }
+
+                .categoryTitle {
+                    color: $wic-azul-claro;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 1vh;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+
+                    @media screen and (min-width: 768px) and (max-width: 1279px) {
+                        font-size: 1.3rem;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 0.9rem;
+                        margin-bottom: 1.5vh;
+                        text-align: center;
+                    }
+                }
+
+                .categorySkills {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    column-gap: 1vw;
+                    row-gap: 2vh;
+                    width: 100%;
+
+                    @media screen and (min-width: 768px) and (max-width: 1279px) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        column-gap: 2vw;
+                        row-gap: 2vh;
+                        justify-items: start;
+                    }
+
+                    @media screen and (min-width: 1280px) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        column-gap: 2vw;
+                        row-gap: 1.5vh;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 4vw;
+                        row-gap: 2vh;
+                        justify-items: center;
+                        place-items: center;
+                    }
+                }
+            }
         }
 
 
@@ -555,6 +718,18 @@ body {
         flex-direction: row;
         justify-content: right;
         gap: 3vw;
+        width: 100%;
+        position: relative;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            justify-content: center;
+            gap: 2.5vw;
+            margin-top: 22vh;
+        }
+
+        @media screen and (min-width: 1280px) {
+            gap: 1vw;
+        }
 
         @media screen and (max-width: 767px) {
             display: flex;
@@ -562,43 +737,70 @@ body {
             justify-content: center;
             align-items: center;
             margin-top: 20vh;
-            gap: 10vw;
-
-
+            gap: 8vh;
+            padding: 0 10px;
         }
 
-        @media screen and (min-width: 1280px) {
+        .projContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
-            gap: 2vw;
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                align-items: center;
+                width: 100%;
+                max-width: 90%;
+            }
+
+            @media screen and (max-width: 767px) {
+                align-items: center;
+                width: 100%;
+            }
         }
 
         .projMenu {
             margin-bottom: 3vh;
             display: flex;
-            //justify-content: center;
             gap: 1vw;
+            width: 100%;
+            justify-content: flex-start;
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                gap: 2vw;
+            }
 
             @media screen and (max-width: 767px) {
                 justify-content: center;
-                gap: 5vw;
+                gap: 4vw;
+                margin-bottom: 4vh;
             }
 
 
             .projBtn {
-
                 color: $wic-gris-claro;
-
                 border: 2px solid $wic-rosa;
-                padding: 5px;
+                padding: 8px 16px;
                 border-radius: 10px;
+                white-space: nowrap;
+                font-size: 14px;
+                transition: all 0.3s ease;
+
+                @media screen and (min-width: 768px) and (max-width: 1279px) {
+                    padding: 6px 12px;
+                    font-size: 13px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    padding: 8px 12px;
+                    font-size: 12px;
+                }
 
                 &:hover {
                     cursor: pointer;
                     background-color: rgba(24, 255, 147, 0.192);
+                    transform: scale(1.05);
                 }
-
-
-
             }
 
             .active {
@@ -611,21 +813,29 @@ body {
             margin-right: 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            //para media queries desktop añadir 1 al grid 
             column-gap: 6vw;
             row-gap: 2vh;
-            //gap: 3vw;
+            width: 100%;
+
+            @media screen and (min-width: 768px) and (max-width: 1279px) {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 4vw;
+                row-gap: 3vh;
+                margin-right: 0;
+                justify-items: center;
+            }
 
             @media screen and (min-width: 1280px) {
                 grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 5vw;
+                column-gap: 2vw;
                 margin-right: 20px;
             }
 
             @media screen and (max-width: 767px) {
                 grid-template-columns: 1fr;
-                row-gap: 3vh;
-                margin-right: 5px;
+                row-gap: 4vh;
+                margin-right: 0;
+                width: 100%;
             }
 
 
@@ -640,6 +850,14 @@ body {
         justify-content: right;
         gap: 3vw;
         margin-bottom: 25vh;
+        width: 100%;
+        position: relative;
+
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            gap: 2.5vw;
+            margin-top: 22vh;
+            margin-right: 5vw;
+        }
 
         div {
             margin-left: 20px;
@@ -647,12 +865,18 @@ body {
             p {
                 color: $wic-gris-claro;
                 margin-bottom: 5vh;
+                max-width: 500px;
+
+                @media screen and (min-width: 768px) and (max-width: 1279px) {
+                    max-width: 450px;
+                    font-size: 15px;
+                }
 
                 @media screen and (max-width: 767px) {
-
-                    width: 50vw;
-
-
+                    width: 90%;
+                    max-width: 100%;
+                    margin-left: 0;
+                    font-size: 14px;
                 }
 
             }
@@ -662,17 +886,19 @@ body {
 
         span {
             color: white;
+
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+            }
         }
 
         @media screen and (max-width: 767px) {
-
             flex-direction: column-reverse;
             justify-content: center;
             align-items: center;
             text-align: center;
-
-
-
+            gap: 5vh;
+            padding: 0 10px;
         }
 
         .contactBtn {
